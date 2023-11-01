@@ -1,9 +1,11 @@
+import 'package:autoagro_firebase/language/locale.dart';
 import 'package:autoagro_firebase/provider/auth_provider.dart';
 // import 'package:autoagro_firebase/screen/login/login_page.dart';
 import 'package:autoagro_firebase/screen/login/options_page.dart';
 import 'package:autoagro_firebase/screen/login/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
@@ -36,7 +38,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
       ],
-      child: MaterialApp(
+      child: GetMaterialApp(
+        translations: LocaleStrings(),
+        locale: Locale('en', 'US'),
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),
         routes: {

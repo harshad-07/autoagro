@@ -12,7 +12,6 @@ import '../utils/custom_colors.dart';
 // import 'package:autoagro_draft/screens/weather/utils/custom_colors.dart';
 
 class HourlyWeatherWidget extends StatelessWidget {
-
   final HourlyWeatherData data;
 
   HourlyWeatherWidget({
@@ -29,14 +28,14 @@ class HourlyWeatherWidget extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
-          child: Text("Today", style: TextStyle(fontSize: 18)),
+          child: Text("today".tr, style: TextStyle(fontSize: 18)),
         ),
         hourlyList(),
       ],
     );
   }
 
-  Widget hourlyList(){
+  Widget hourlyList() {
     return Container(
       height: 150,
       padding: EdgeInsets.only(bottom: 10, top: 10),
@@ -45,34 +44,43 @@ class HourlyWeatherWidget extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: data.hourly.length > 12 ? 12 : data.hourly.length,
         itemBuilder: (context, index) {
-          return Obx(() =>  GestureDetector(
-            onTap: () => cardIndex.value = index,
-            child: Container(
-              width: 90,
-              margin: EdgeInsets.only(left: 20, right: 5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12), 
-                boxShadow: [BoxShadow(offset: Offset(0.5, 0), blurRadius: 30, spreadRadius: 1, color: CustomColors.dividerLine.withAlpha(150))], 
-                gradient: cardIndex.value == index ? LinearGradient(colors: [CustomColors.firstGradientColor, CustomColors.secondGradientColor]) : LinearGradient(colors: [Colors.white60, Colors.white30]), 
-              ),
-              child: HourlyDetails(
-                index: index,
-                cardIndex: cardIndex.toInt(),
-                icon: data.hourly[index].weather![0].icon!,
-                temp: data.hourly[index].temp!.round(),
-                timeStamp: data.hourly[index].dt!,
-              ),
-            )
-          ));
+          return Obx(() => GestureDetector(
+              onTap: () => cardIndex.value = index,
+              child: Container(
+                width: 90,
+                margin: EdgeInsets.only(left: 20, right: 5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: Offset(0.5, 0),
+                        blurRadius: 30,
+                        spreadRadius: 1,
+                        color: CustomColors.dividerLine.withAlpha(150))
+                  ],
+                  gradient: cardIndex.value == index
+                      ? LinearGradient(colors: [
+                          CustomColors.firstGradientColor,
+                          CustomColors.secondGradientColor
+                        ])
+                      : LinearGradient(
+                          colors: [Colors.white60, Colors.white30]),
+                ),
+                child: HourlyDetails(
+                  index: index,
+                  cardIndex: cardIndex.toInt(),
+                  icon: data.hourly[index].weather![0].icon!,
+                  temp: data.hourly[index].temp!.round(),
+                  timeStamp: data.hourly[index].dt!,
+                ),
+              )));
         },
       ),
     );
   }
-
 }
 
 class HourlyDetails extends StatelessWidget {
-
   int temp;
   int timeStamp;
   String icon;
@@ -89,7 +97,7 @@ class HourlyDetails extends StatelessWidget {
     required this.cardIndex,
   }) : super(key: key);
 
-  String getTime(final timeStamp){
+  String getTime(final timeStamp) {
     DateTime dt = DateTime.fromMillisecondsSinceEpoch(timeStamp * 1000);
     String time = DateFormat('jm').format(dt);
     return time;
@@ -102,15 +110,20 @@ class HourlyDetails extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.only(top: 10),
-          child: Text(getTime(timeStamp), style: TextStyle(color: cardIndex == index ? Colors.white : Colors.black)),
+          child: Text(getTime(timeStamp),
+              style: TextStyle(
+                  color: cardIndex == index ? Colors.white : Colors.black)),
         ),
         Container(
           margin: EdgeInsets.all(5),
-          child: Image.asset('assets/weather_images/$icon.png', height: 40, width: 40),
+          child: Image.asset('assets/weather_images/$icon.png',
+              height: 40, width: 40),
         ),
         Container(
           margin: EdgeInsets.only(bottom: 10),
-          child: Text("$temp°" , style: TextStyle(color: cardIndex == index ? Colors.white : Colors.black)),
+          child: Text("$temp°",
+              style: TextStyle(
+                  color: cardIndex == index ? Colors.white : Colors.black)),
         ),
       ],
     );

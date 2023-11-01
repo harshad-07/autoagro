@@ -3,6 +3,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'package:easy_image_viewer/easy_image_viewer.dart';
@@ -206,8 +207,8 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
                   height: 42,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    SizedBox(width: 32),
                     ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green.shade800,
@@ -215,8 +216,7 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
                         // onPressed: () {pickimage_gallery();},
                         onPressed: () => getImage(ImageSource.gallery),
                         icon: Icon(Icons.photo),
-                        label: Text("Gallery")),
-                    SizedBox(width: 38),
+                        label: Text("Gallery".tr)),
                     ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green.shade800,
@@ -224,7 +224,7 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
                         // onPressed: () {pickimage_camera();},
                         onPressed: () => getImage(ImageSource.camera),
                         icon: Icon(Icons.camera_alt),
-                        label: Text("Camera")),
+                        label: Text("Camera".tr)),
                   ],
                 ),
                 SizedBox(height: 22),
@@ -235,10 +235,31 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
                     // onPressed: () {},
                     onPressed: () => predictImage(image!),
                     icon: Icon(Icons.energy_savings_leaf),
-                    label: Text("Detect")),
+                    label: Text("Detect".tr)),
+                SizedBox(height: 21),
+                rule(context),
               ],
             )),
       ),
+    );
+  }
+
+  Widget rule(BuildContext context) {
+    return Column(
+      children: [
+        Text("NOTE".tr,
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.underline,
+                decorationStyle: TextDecorationStyle.wavy,
+                decorationThickness: 1.4)),
+        SizedBox(height: 14),
+        Text("note_1".tr),
+        Text("note_2".tr),
+        Text("note_3".tr),
+        // Text("data"),
+        // Text("data"),
+      ],
     );
   }
 }

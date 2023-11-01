@@ -4,6 +4,7 @@
 // import 'package:autoagro_draft/screens/weather/weather_page.dart';
 // import 'package:autoagro_draft/widgets/drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:provider/provider.dart';
 
@@ -39,7 +40,7 @@ List<PersistentBottomNavBarItem> _navBarItems() {
         icon: Icon(Icons.camera_alt),
         inactiveIcon: Icon(Icons.camera_alt_outlined),
         activeColorPrimary: Colors.green.shade800,
-        title: ("Detect"),
+        title: ("Detect".tr),
         textStyle: TextStyle(fontWeight: FontWeight.bold)),
     PersistentBottomNavBarItem(
         icon: Icon(Icons.offline_bolt),
@@ -51,13 +52,13 @@ List<PersistentBottomNavBarItem> _navBarItems() {
         icon: Icon(Icons.build_circle),
         inactiveIcon: Icon(Icons.build_circle_outlined),
         activeColorPrimary: Colors.grey.shade800,
-        title: ("Services"),
+        title: ("Services".tr),
         textStyle: TextStyle(fontWeight: FontWeight.bold)),
     PersistentBottomNavBarItem(
         icon: Icon(Icons.wb_sunny),
         inactiveIcon: Icon(Icons.wb_sunny_outlined),
         activeColorPrimary: Colors.yellow.shade900,
-        title: ("Weather"),
+        title: ("Weather".tr),
         textStyle: TextStyle(fontWeight: FontWeight.bold)),
   ];
 }
@@ -91,13 +92,40 @@ class _HomePageState extends State<HomePage> {
                 context: context,
                 builder: (context) => AlertDialog(
                   actionsAlignment: MainAxisAlignment.center,
-                  title: Text("Change the Language?"),
+                  title: Text("change".tr),
                   actions: [
                     Column(
                       children: [
-                        TextButton(onPressed: () {}, child: Text("Hindi")),
-                        TextButton(onPressed: () {}, child: Text("Marathi")),
-                        TextButton(onPressed: () {}, child: Text("English")),
+                        TextButton(
+                            onPressed: () {
+                              var locale = Locale('mr', 'IN');
+                              Get.updateLocale(locale);
+                              Navigator.pop(context);
+                            },
+                            child: Text(
+                              "मराठी",
+                              style: TextStyle(fontSize: 16),
+                            )),
+                        TextButton(
+                            onPressed: () {
+                              var locale = Locale('hi', 'IN');
+                              Get.updateLocale(locale);
+                              Navigator.pop(context);
+                            },
+                            child: Text(
+                              "हिंदी",
+                              style: TextStyle(fontSize: 16),
+                            )),
+                        TextButton(
+                            onPressed: () {
+                              var locale = Locale('en', 'US');
+                              Get.updateLocale(locale);
+                              Navigator.pop(context);
+                            },
+                            child: Text(
+                              "English",
+                              style: TextStyle(fontSize: 16),
+                            )),
                       ],
                     ),
                     // TextButton(onPressed: (){}, child: Text("Yes")),
@@ -122,13 +150,13 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                             color: Colors.black, fontWeight: FontWeight.bold)),
                     content: Text(
-                      "Are you sure you want to logout?",
+                      "logout?".tr,
                       style: TextStyle(color: Colors.black),
                     ),
                     actions: [
                       TextButton(
                         child: Text(
-                          "Yes",
+                          "Yes".tr,
                           style: TextStyle(
                             color: Colors.black,
                           ),
@@ -154,7 +182,7 @@ class _HomePageState extends State<HomePage> {
                         style: ButtonStyle(
                             backgroundColor: MaterialStatePropertyAll(
                                 Colors.green.shade100)),
-                        child: Text("No",
+                        child: Text("No".tr,
                             style: TextStyle(
                               color: Colors.green,
                             )),

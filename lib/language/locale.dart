@@ -1,0 +1,61 @@
+import 'package:get/get.dart';
+
+class LocaleStrings extends Translations {
+  @override
+  Map<String, Map<String, String>> get keys => {
+        'en_US': {
+          'NOTE': 'NOTE',
+          'note_1': '1. Click clear photo',
+          'note_2': '2. Make sure you have proper sunlight',
+          'note_3': '3. Wait for atleast 3 Seconds',
+          'Gallery': 'Gallery',
+          'Camera': 'Camera',
+          'Detect': 'Detect',
+          'change': 'Change the language?',
+          'Services': 'Services',
+          'Weather': 'Weather',
+          'today': 'Today',
+          'next': 'Next Days',
+          'logout': 'Logout',
+          'logout?': 'Are you sure you want to logout?',
+          'Yes': 'Yes',
+          'No': 'No',
+        },
+        'hi_IN': {
+          'NOTE': 'टिप्पणी',
+          'note_1': '1. क्लियर फोटो पर क्लिक करें',
+          'note_2': '2. सुनिश्चित करें कि आपको उचित धूप मिले',
+          'note_3': '3. कम से कम 3 सेकंड तक रुकें',
+          'Gallery': 'गैलरी',
+          'Camera': 'कैमरा',
+          'Detect': 'पता लगाना',
+          'change': 'भाषा बदलें?',
+          'Services': 'सेवा',
+          'Weather': 'मौसम',
+          'today': 'आज',
+          'next': 'अगले दिन',
+          'logout': 'लॉग आउट',
+          'logout?': 'क्या आप लॉग आउट करना चाहते हैं?',
+          'Yes': 'हाँ',
+          'No': 'नहीं',
+        },
+        'mr_IN': {
+          'NOTE': 'टीप',
+          'note_1': '1. फोटो साफ करा क्लिक करा',
+          'note_2': '2. तुमच्याकडे योग्य सूर्यप्रकाश असल्याची खात्री करा',
+          'note_3': '3. किमान 3 सेकंद प्रतीक्षा करा',
+          'Gallery': 'गॅलरी',
+          'Camera': 'कॅमेरा',
+          'Detect': 'शोधा',
+          'change': 'भाषा बदलायची?',
+          'Services': 'सेवा',
+          'Weather': 'हवामान',
+          'today': 'आज',
+          'next': 'पुढील दिवस',
+          'logout': 'बाहेर पडणे',
+          'logout?': 'तुमची खात्री आहे की तुम्ही लॉगआउट करू इच्छिता?',
+          'Yes': 'होय',
+          'No': 'नाही',
+        }
+      };
+}
