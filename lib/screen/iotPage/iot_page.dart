@@ -1,37 +1,155 @@
 // import 'package:autoagro_draft/models/apimodel.dart';
 // import 'package:autoagro_draft/utils/colors.dart';
 // import 'package:autoagro_draft/widgets/iot_data1.dart';
+import 'package:autoagro_firebase/screen/iotPage/widget/indicators.dart';
 import 'package:flutter/material.dart';
+import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class IoTPage extends StatelessWidget {
-
   // Conditions temp, humid;
-  
+
   // IoTPage({required this.temp,required this.humid,super.key});
 
   @override
   Widget build(BuildContext context) {
+    var h = MediaQuery.of(context).size.height;
+    var w = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 9, 36, 18),
       body: Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.vertical(top: Radius.circular(50)), color: Colors.white.withOpacity(0.85)),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(50)),
+            color: Colors.white.withOpacity(0.85)),
         // height: MediaQuery.of(context).size.height,
         // width: MediaQuery.of(context).size.width,
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 16),
-              child: SingleChildScrollView(
+              padding: const EdgeInsets.only(top: 25),
+              child: ListView(
                 physics: BouncingScrollPhysics(),
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  child: Column(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.symmetric(horizontal: 24),
-                        height: 300,
-                        decoration: BoxDecoration(color: Colors.white.withOpacity(0.95), borderRadius: BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8), topLeft: Radius.circular(8), topRight: Radius.circular(69)), boxShadow: [BoxShadow(color: Color(0xFF3A5160).withOpacity(0.2), offset: Offset(1.1, 1.1), blurRadius: 10)]),
-                        // child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 24),
+                    width: w * 0.9,
+                    height: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.95),
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(8),
+                            bottomRight: Radius.circular(8),
+                            topLeft: Radius.circular(8),
+                            topRight: Radius.circular(69)),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Color(0xFF3A5160).withOpacity(0.2),
+                              offset: Offset(1.1, 1.1),
+                              blurRadius: 10)
+                        ]),
+                    child: Center(child: Indicators()),
+                  ),
+                  SizedBox(height: 50),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 24),
+                    width: w * 0.9,
+                    height: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.95),
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(8),
+                            bottomRight: Radius.circular(8),
+                            topLeft: Radius.circular(8),
+                            topRight: Radius.circular(69)),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Color(0xFF3A5160).withOpacity(0.2),
+                              offset: Offset(1.1, 1.1),
+                              blurRadius: 10)
+                        ]),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Moisture(),
+                        Text('Moisture',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600, fontSize: 16))
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 50),
+                  Container(
+                    padding: EdgeInsets.all(21),
+                    margin: EdgeInsets.symmetric(horizontal: 24),
+                    decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.95),
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(8),
+                            bottomRight: Radius.circular(8),
+                            topLeft: Radius.circular(8),
+                            topRight: Radius.circular(69)),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Color(0xFF3A5160).withOpacity(0.2),
+                              offset: Offset(1.1, 1.1),
+                              blurRadius: 10)
+                        ]),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text('Pump :',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600, fontSize: 16)),
+                        LiteRollingSwitch(
+                            value: false,
+                            textOn: 'ON',
+                            textOff: 'OFF',
+                            colorOn: Colors.green,
+                            colorOff: Colors.red,
+                            onTap: () {},
+                            onDoubleTap: () {},
+                            onSwipe: () {},
+                            onChanged: (bool position) {}),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 50),
+                  // Moisture2()
+                  // Container(
+                  //   height: 300,
+                  //   width: 300,
+                  //   color: Colors.red,
+                  // ),
+                ],
+              ),
+            ),
+            AnimatedContainer(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    topLeft: Radius.elliptical(8.5, 25)),
+                color: Colors.blue,
+              ),
+              margin: EdgeInsets.only(top: 25),
+              duration: Duration(milliseconds: 500),
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Text("IoT Device",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold)),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// child: Column(
                         //   children: [
                         //     Padding(
                         //       padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
@@ -327,39 +445,6 @@ class IoTPage extends StatelessWidget {
                         //   ],
                         // ),
 
-                      ),
-                      SizedBox(height: 50),
-                      Container(
-                        height: 300,
-                        width: 300,
-                        decoration: BoxDecoration(color: Colors.white.withOpacity(0.95), borderRadius: BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8), topLeft: Radius.circular(8), topRight: Radius.circular(69)), boxShadow: [BoxShadow(color: Color(0xFF3A5160).withOpacity(0.2), offset: Offset(1.1, 1.1), blurRadius: 10)]),
-            
-                      ),
-                      Container(
-                        height: 300,
-                        width: 300,
-                        color: Colors.red,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            AnimatedContainer(
-              decoration: BoxDecoration(borderRadius: BorderRadius.only(bottomRight: Radius.circular(20), topRight: Radius.circular(20), topLeft: Radius.elliptical(8.5, 25)), color: Colors.blue,),
-              margin: EdgeInsets.only(top: 25),
-              duration: Duration(milliseconds: 500),
-              child: Padding(
-                padding: const EdgeInsets.all(18.0),
-                child: Text("IoT Device Data", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 // import 'dart:convert';
 // import 'dart:io';

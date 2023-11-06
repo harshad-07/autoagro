@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 90,
+        toolbarHeight: 80,
         leading: Builder(builder: (context) {
           return IconButton(
               onPressed: () => Scaffold.of(context).openDrawer(),
@@ -202,8 +202,8 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(100),
                     image: DecorationImage(
                         image: AssetImage('assets/icons/user.png'))),
-                width: 50,
-                height: 50,
+                width: 45,
+                height: 45,
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(500),
                     child: Image.network(

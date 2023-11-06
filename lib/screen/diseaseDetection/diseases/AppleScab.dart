@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 // import 'package:carousel_pro/carousel_pro.dart';
 
@@ -101,7 +102,7 @@ class _AppleScabState extends State<AppleScab> {
               padding:
                   EdgeInsets.only(top: 60, bottom: 20, left: 14, right: 14),
               child: Text(
-                'SYMPTOMS',
+                'symptoms'.tr,
                 style:
                     TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
               ),
@@ -110,7 +111,7 @@ class _AppleScabState extends State<AppleScab> {
               padding:
                   EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
               child: Text(
-                '     The first visible symptoms of apple scab appear in the spring in the form of minute, circular, olive-green spots on leaves, often along a main vein. As they enlarge, they become brownish-black and eventually coalesce to form large patches of necrotic tissue. As they develop further, they often coalesce and become raised, hard and corky. This restricts the expansion of the fruit and leads to distortion and cracking of the skin that expose the flesh. Light attacks do not affect the fruit quality significantly. However, the scabs can expose the fruits to opportunistic pathogens and rots, reducing the storage capacity and the quality.  Affected leaves are often deformed and fall off prematurely, leading to defoliation in case of heavy infections. On shoots, the infections causes blistering and cracking that can then provide entry for opportunistic pathogens. On the fruits, brown to dark brown circular areas appear on the surface.',
+                'appleScabSymtoms'.tr,
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
               ),
@@ -119,7 +120,7 @@ class _AppleScabState extends State<AppleScab> {
               padding:
                   EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
               child: Text(
-                'FAVORABLE ENVIRONMENT CONDITIONS',
+                'conditions'.tr,
                 style:
                     TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
               ),
@@ -128,7 +129,7 @@ class _AppleScabState extends State<AppleScab> {
               padding:
                   EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
               child: Text(
-                '     Apple scab is a disease caused by the fungus Venturia inaequalis. It survives the winter mainly on infected leaves on the ground but also on bud scales or lesions on wood. At the onset of spring, the fungus resumes growth and starts to produce spores, which are later discharged and dispersed over long distances by the wind. These spores land on developing leaves and fruits and start a new infection. Outer parts of unopened fruit buds are highly susceptible to scab. However, as the fruit matures it becomes much less susceptible. Humid environment, wetting period of leaves or fruits are essential for the infection. Alternative hosts include shrubs of the genus Cotoneaster, Pyracantha and Sorbus. All apple varieties are susceptible to scab, with Gala being more vulnerable.',
+                'appleScabConditions'.tr,
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
               ),
@@ -137,7 +138,7 @@ class _AppleScabState extends State<AppleScab> {
               padding:
                   EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
               child: Text(
-                'MANAGEMENT (REMEDIES)',
+                'remedies'.tr,
                 style:
                     TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
               ),
@@ -146,7 +147,7 @@ class _AppleScabState extends State<AppleScab> {
               padding:
                   EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
               child: Text(
-                '''1. Use tolerant or resistant varieties.\n\n2. Monitor orchards for signs of the disease.\n\n3. Pick up affected leaves, shoots and fruits.\n\n4. Rake all the fallen leaves from around your trees after harvest.\n\n5. Alternatively, apply 5% urea to leaves in the autumn to enhance their decomposition and to obstruct the life cycle of the fungus.\n\n6. Excessive leaf litter can can also be mowed to speed up the breakdown of tissues.\n\n7. Ensure a pruning method that allow for more air circulation.\n\n8. Water in the evening or early morning hours and avoid overhead irrigation.\n\n9. Avoid getting foliage wet when watering.\n\n10. Apply lime after leaf drop to increase soil pH.\n\n11. Spread a mulch under the trees, keeping it away from the trunk.''',
+                'appleScabRemedies'.tr,
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
               ),
@@ -155,7 +156,7 @@ class _AppleScabState extends State<AppleScab> {
               padding:
                   EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
               child: Text(
-                'CHEMICAL/BIOLOGICAL CONTROL',
+                'chemicals'.tr,
                 style:
                     TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
               ),
@@ -164,7 +165,7 @@ class _AppleScabState extends State<AppleScab> {
               padding:
                   EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
               child: Text(
-                '    If disease levels were high the previous season, liquid copper fungicides can be sprayed to impede the fungal growth on the tree during the winter season. Sulfur sprays are only partially effective against apple scab. However, solutions containing sulfur and pyrethrins are available for organic control of the disease during the growing season. Always consider an integrated approach with preventive measures together with biological treatments if available. Protectant fungicides such as dodine, captan or dinathion can be sprayed around bud break to avoid the disease. Once scab has been detected, fungicides based on difenoconazole, myclobutanil or sulphur can be used to control the development of the fungus. Ensure scab fungicides from different chemical groups are used to avoid the development of resistance. ',
+                'appleScabChemicals'.tr,
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
               ),

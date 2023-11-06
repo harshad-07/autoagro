@@ -4,6 +4,21 @@ class LocaleStrings extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en_US': {
+          'start': 'Lets get Started',
+          'start2': 'Never a better time now to start',
+          'start3': 'Get Started',
+          'provide': 'Please provide your mobile number',
+          'code': 'Don\'t forget to select your country code',
+          'enterPhone': 'Enter your phone number',
+          'getCode': 'Get Code',
+          'otp': 'We gotch you!',
+          'otp2':
+              'Please enter the verification code sent to your mobile number',
+          'verify': 'Verify Code',
+          'hey': 'Heyya! Let\'s Complete Few Things',
+          'Welcome': 'Welcome',
+          'pp': 'Set Profile Picture',
+          'cancle': 'Cancle',
           'NOTE': 'NOTE',
           'note_1': '1. Click clear photo',
           'note_2': '2. Make sure you have proper sunlight',
@@ -12,6 +27,8 @@ class LocaleStrings extends Translations {
           'Camera': 'Camera',
           'Detect': 'Detect',
           'change': 'Change the language?',
+          'choose': 'Select the Language',
+          'continue': 'Continue',
           'Services': 'Services',
           'Weather': 'Weather',
           'today': 'Today',
@@ -20,8 +37,36 @@ class LocaleStrings extends Translations {
           'logout?': 'Are you sure you want to logout?',
           'Yes': 'Yes',
           'No': 'No',
+          'symptoms': 'SYMPTOMS',
+          'appleScabSymtoms':
+              '     The first visible symptoms of apple scab appear in the spring in the form of minute, circular, olive-green spots on leaves, often along a main vein. As they enlarge, they become brownish-black and eventually coalesce to form large patches of necrotic tissue. As they develop further, they often coalesce and become raised, hard and corky. This restricts the expansion of the fruit and leads to distortion and cracking of the skin that expose the flesh. Light attacks do not affect the fruit quality significantly. However, the scabs can expose the fruits to opportunistic pathogens and rots, reducing the storage capacity and the quality.  Affected leaves are often deformed and fall off prematurely, leading to defoliation in case of heavy infections. On shoots, the infections causes blistering and cracking that can then provide entry for opportunistic pathogens. On the fruits, brown to dark brown circular areas appear on the surface.',
+          'conditions': 'FAVORABLE ENVIRONMENT CONDITIONS',
+          'appleScabConditions':
+              '     Apple scab is a disease caused by the fungus Venturia inaequalis. It survives the winter mainly on infected leaves on the ground but also on bud scales or lesions on wood. At the onset of spring, the fungus resumes growth and starts to produce spores, which are later discharged and dispersed over long distances by the wind. These spores land on developing leaves and fruits and start a new infection. Outer parts of unopened fruit buds are highly susceptible to scab. However, as the fruit matures it becomes much less susceptible. Humid environment, wetting period of leaves or fruits are essential for the infection. Alternative hosts include shrubs of the genus Cotoneaster, Pyracantha and Sorbus. All apple varieties are susceptible to scab, with Gala being more vulnerable.',
+          'remedies': 'MANAGEMENT (REMEDIES)',
+          'appleScabRemedies':
+              ''''1. Use tolerant or resistant varieties.\n\n2. Monitor orchards for signs of the disease.\n\n3. Pick up affected leaves, shoots and fruits.\n\n4. Rake all the fallen leaves from around your trees after harvest.\n\n5. Alternatively, apply 5% urea to leaves in the autumn to enhance their decomposition and to obstruct the life cycle of the fungus.\n\n6. Excessive leaf litter can can also be mowed to speed up the breakdown of tissues.\n\n7. Ensure a pruning method that allow for more air circulation.\n\n8. Water in the evening or early morning hours and avoid overhead irrigation.\n\n9. Avoid getting foliage wet when watering.\n\n10. Apply lime after leaf drop to increase soil pH.\n\n11. Spread a mulch under the trees, keeping it away from the trunk.''',
+          'chemicals': 'CHEMICAL/BIOLOGICAL CONTROL',
+          'appleScabChemicals':
+              '    If disease levels were high the previous season, liquid copper fungicides can be sprayed to impede the fungal growth on the tree during the winter season. Sulfur sprays are only partially effective against apple scab. However, solutions containing sulfur and pyrethrins are available for organic control of the disease during the growing season. Always consider an integrated approach with preventive measures together with biological treatments if available. Protectant fungicides such as dodine, captan or dinathion can be sprayed around bud break to avoid the disease. Once scab has been detected, fungicides based on difenoconazole, myclobutanil or sulphur can be used to control the development of the fungus. Ensure scab fungicides from different chemical groups are used to avoid the development of resistance. ',
+          'peachBlackSpotChemicals':
+              '1. Bactericides are available for suppression of bacterial spot. Initial treatments focus on suppression of leaf infection and later on protection of fruit as they emerge from the shuck.\n\n2. Bactericide treatment may not be sufficient to eliminate symptoms under conditions very favorable for disease development. Compounds available for use on peach and nectarine for bacterial spot include copper, oxytetracycline (Mycoshield and generic equivalents), and syllit+captan; however, repeated applications are typically necessary for even minimal disease control.\n\n3. Oxytetracycline is generally considered the most effective compound and the least prone to phytotoxicity problems (damage to plant tissue), but also perhaps most likely to lose effectiveness with the appearance of bacterial strains with resistance.',
         },
         'hi_IN': {
+          'start': 'चलिए शुरू करते हैं',
+          'start2': 'आरंभ करने के लिए इससे बेहतर समय कभी नहीं हो सकता',
+          'start3': 'आगे बढे',
+          'provide': 'कृपया अपना मोबाइल नंबर प्रदान करें',
+          'code': 'अपना देश कोड चुनना न भूलें',
+          'enterPhone': 'अपना फोन नंबर डालें',
+          'getCode': 'कोड प्राप्त करें',
+          'otp': 'आप निश्चिंत रहिये!',
+          'otp2': 'कृपया आपके मोबाइल नंबर पर भेजा गया सत्यापन कोड दर्ज करें',
+          'verify': 'कोड सत्यापित करें',
+          'hey': 'Heyya! Let\'s Complete Few Things',
+          'Welcome': 'स्वागत',
+          'pp': 'प्रोफ़ाइल चित्र सेट करें',
+          'cancle': 'Cancle',
           'NOTE': 'टिप्पणी',
           'note_1': '1. क्लियर फोटो पर क्लिक करें',
           'note_2': '2. सुनिश्चित करें कि आपको उचित धूप मिले',
@@ -30,6 +75,8 @@ class LocaleStrings extends Translations {
           'Camera': 'कैमरा',
           'Detect': 'पता लगाना',
           'change': 'भाषा बदलें?',
+          'choose': 'भाषा का चयन करें',
+          'continue': 'जारी रखना',
           'Services': 'सेवा',
           'Weather': 'मौसम',
           'today': 'आज',
@@ -38,8 +85,36 @@ class LocaleStrings extends Translations {
           'logout?': 'क्या आप लॉग आउट करना चाहते हैं?',
           'Yes': 'हाँ',
           'No': 'नहीं',
+          'symptoms': 'लक्षण',
+          'appleScabSymtoms':
+              '     सेब की पपड़ी के पहले दिखाई देने वाले लक्षण वसंत में पत्तियों पर मिनट, गोलाकार, जैतून-हरे धब्बे के रूप में दिखाई देते हैं, अक्सर एक मुख्य नस के साथ। जैसे-जैसे वे बड़े होते हैं, वे भूरे-काले हो जाते हैं और अंततः नेक्रोटिक ऊतक के बड़े पैच बनाने के लिए संगठित होते हैं। जैसे-जैसे वे आगे विकसित होते हैं, वे अक्सर एकजुट होते हैं और उभरे हुए, कठोर और कॉर्की हो जाते हैं। यह फल के विस्तार को प्रतिबंधित करता है और मांस को उजागर करने वाली त्वचा की विकृति और दरार की ओर जाता है। हल्के हमले फल की गुणवत्ता को महत्वपूर्ण रूप से प्रभावित नहीं करते हैं। हालांकि, स्कैब फलों को अवसरवादी रोगजनकों और सड़न के लिए उजागर कर सकते हैं, जिससे भंडारण क्षमता और गुणवत्ता कम हो जाती है। प्रभावित पत्तियां अक्सर विकृत हो जाती हैं और समय से पहले गिर जाती हैं, जिससे भारी संक्रमण के मामले में गिरावट आती है। शूट पर, संक्रमण फफोले और दरार का कारण बनता है जो तब अवसरवादी रोगजनकों के लिए प्रवेश प्रदान कर सकता है। फलों पर, सतह पर भूरे से गहरे भूरे रंग के गोलाकार क्षेत्र दिखाई देते हैं।',
+          'conditions': 'अनुकूल पर्यावरण स्थितियाँ',
+          'appleScabConditions':
+              'सेब की पपड़ी एक बीमारी है जो फंगस वेंचुरा इनाइक्वलिस के कारण होती है। यह सर्दियों में मुख्य रूप से जमीन पर संक्रमित पत्तियों पर जीवित रहता है, लेकिन कली के तराजू या लकड़ी पर घावों पर भी। वसंत की शुरुआत में, कवक विकास को फिर से शुरू करता है और बीजाणुओं का उत्पादन करना शुरू कर देता है, जो बाद में हवा द्वारा लंबी दूरी पर छुट्टी दे दी जाती है और फैल जाती है। ये बीजाणु विकासशील पत्तियों और फलों पर उतरते हैं और एक नया संक्रमण शुरू करते हैं। खुले फलों की कलियों के बाहरी हिस्से पपड़ी के लिए अतिसंवेदनशील होते हैं। हालांकि, जैसे-जैसे फल परिपक्व होता है, यह बहुत कम संवेदनशील हो जाता है। आर्द्र वातावरण, पत्तियों या फलों की गीली अवधि संक्रमण के लिए आवश्यक है। वैकल्पिक मेजबानों में जीनस कोटोनेस्टर, पायराकैंथा और सोरबस की झाड़ियाँ शामिल हैं। सभी सेब किस्में स्कैब के लिए अतिसंवेदनशील होती हैं, जिसमें गाला अधिक कमजोर होता है।',
+          'remedies': 'प्रबंधन (उपचार)',
+          'appleScabRemedies':
+              '"1. सहिष्णु या प्रतिरोधी किस्मों का उपयोग करें। \n\n2.रोग के संकेतों के लिए बागों की निगरानी करें।\n\n3. प्रभावित पत्तियों, कोंपलों और फलों को उठाओ।\n\n4. फसल के बाद अपने पेड़ों के चारों ओर से सभी गिरे हुए पत्तों को उठाओ।\n\n5. वैकल्पिक रूप से, शरद ऋतु में पत्तियों पर 5% यूरिया लागू करें ताकि उनके अपघटन को बढ़ाया जा सके और कवक के जीवन चक्र को बाधित किया जा सके।\n\n6. ऊतकों के टूटने को तेज करने के लिए अत्यधिक पत्ती कूड़े को भी बोया जा सकता है।\n\n7. एक छंटाई विधि सुनिश्चित करें जो अधिक वायु परिसंचरण की अनुमति देती है।\n\n8. शाम या सुबह के समय पानी दें और ओवरहेड सिंचाई से बचें।\n\n9. पानी देते समय पत्ते गीले होने से बचें। मिट्टी के पीएच को बढ़ाने के लिए पत्ती की बूंद के बाद चूना लगाएं।\n\n10. पेड़ों के नीचे एक गीली घास फैलाएं, इसे तने से दूर रखें।',
+          'chemicals': 'रासायनिक/जैविक नियंत्रण',
+          'appleScabChemicals':
+              'यदि पिछले मौसम में रोग का स्तर अधिक था, तो सर्दियों के मौसम के दौरान पेड़ पर फंगल विकास को बाधित करने के लिए तरल तांबे के कवकनाशी का छिड़काव किया जा सकता है। सल्फर स्प्रे केवल सेब स्कैब के खिलाफ आंशिक रूप से प्रभावी हैं। हालांकि, बढ़ते मौसम के दौरान रोग के जैविक नियंत्रण के लिए सल्फर और पाइरेथ्रिन युक्त समाधान उपलब्ध हैं। यदि उपलब्ध हो तो हमेशा जैविक उपचार के साथ निवारक उपायों के साथ एक एकीकृत दृष्टिकोण पर विचार करें। रोग से बचने के लिए डोडीन, कैप्टेन या डायनाथियोन जैसे प्रोटेक्टेंट कवकनाशी को कली के टूटने के आसपास छिड़का जा सकता है। एक बार स्कैब का पता चलने के बाद, कवक के विकास को नियंत्रित करने के लिए डिफेनोकोनाज़ोल, माइक्लोबुटानिल या सल्फर पर आधारित कवकनाशी का उपयोग किया जा सकता है। सुनिश्चित करें कि प्रतिरोध के विकास से बचने के लिए विभिन्न रासायनिक समूहों से स्कैब कवकनाशी का उपयोग किया जाता है।',
+          'peachBlackSpotChemicals':
+              '1. जीवाणु धब्बे के दमन के लिए जीवाणुनाशक उपलब्ध हैं। प्रारंभिक उपचार पत्ती के संक्रमण के दमन पर ध्यान केंद्रित करते हैं और बाद में फल की सुरक्षा पर ध्यान केंद्रित करते हैं क्योंकि वे शुक से निकलते हैं। रोग के विकास के लिए बहुत अनुकूल परिस्थितियों में लक्षणों को खत्म करने के लिए जीवाणुनाशक उपचार पर्याप्त नहीं हो सकता है।\n\n2. बैक्टीरियल स्पॉट के लिए आड़ू और अमृत पर उपयोग के लिए उपलब्ध यौगिकों में तांबा, ऑक्सीटेट्रासाइक्लिन (माइकोशील्ड और जेनेरिक समकक्ष), और सिल्लिट कैप्टेन; हालांकि, न्यूनतम रोग नियंत्रण के लिए भी बार-बार आवेदन आम तौर पर आवश्यक होते हैं।\n\n3. ऑक्सीटेट्रासाइक्लिन को आमतौर पर सबसे प्रभावी यौगिक माना जाता है और फाइटोटॉक्सिसिटी समस्याओं (पौधे के ऊतकों को नुकसान) के लिए कम से कम प्रवण होता है, लेकिन प्रतिरोध के साथ बैक्टीरिया के उपभेदों की उपस्थिति के साथ प्रभावशीलता खोने की सबसे अधिक संभावना है।',
         },
         'mr_IN': {
+          'start': 'चला सुरू करुया',
+          'start2': 'प्रारंभ करण्यासाठी आता कधीही चांगली वेळ नाही',
+          'start3': 'सुरु करूया',
+          'provide': 'कृपया तुमचा मोबाईल नंबर द्या',
+          'code': 'तुमचा देश कोड निवडायला विसरू नका',
+          'enterPhone': 'तुमचा फोन नंबर एंटर करा',
+          'getCode': 'कोड मिळवा',
+          'otp': 'आपन निश्चित राहा!',
+          'otp2': 'कृपया तुमच्या मोबाईल नंबरवर पाठवलेला पडताळणी कोड टाका',
+          'verify': 'कोड सत्यापित करा',
+          'hey': 'Heyya! Let\'s Complete Few Things',
+          'Welcome': 'स्वागत आहे',
+          'pp': 'प्रोफाइल चित्र सेट करा',
+          'cancle': 'Cancle',
           'NOTE': 'टीप',
           'note_1': '1. फोटो साफ करा क्लिक करा',
           'note_2': '2. तुमच्याकडे योग्य सूर्यप्रकाश असल्याची खात्री करा',
@@ -48,6 +123,8 @@ class LocaleStrings extends Translations {
           'Camera': 'कॅमेरा',
           'Detect': 'शोधा',
           'change': 'भाषा बदलायची?',
+          'choose': 'भाषा निवडा',
+          'continue': 'सुरू',
           'Services': 'सेवा',
           'Weather': 'हवामान',
           'today': 'आज',
@@ -56,6 +133,20 @@ class LocaleStrings extends Translations {
           'logout?': 'तुमची खात्री आहे की तुम्ही लॉगआउट करू इच्छिता?',
           'Yes': 'होय',
           'No': 'नाही',
+          'symptoms': 'लक्षणे',
+          'appleScabSymtoms':
+              '     सफरचंदाच्या खरुजाची पहिली दृश्यमान लक्षणे वसंत ऋतूत पानांवर सूक्ष्म, वर्तुळाकार, ऑलिव्ह-हिरव्या डागांच्या स्वरूपात दिसून येतात, बहुतेकदा मुख्य शिरासह. जसजसे ते वाढतात तसतसे ते तपकिरी-काळे होतात आणि शेवटी एकत्र येऊन नेक्रोटिक ऊतींचे मोठे ठिपके तयार करतात. जसजसे ते पुढे विकसित होतात, तसतसे ते बर्याचदा एकत्र येतात आणि वाढलेले, कठोर आणि कडक बनतात. यामुळे फळांचा विस्तार प्रतिबंधित होतो आणि मांस उघडकरणार्या त्वचेची विकृती आणि क्रॅक होते. हलक्या हल्ल्यांमुळे फळांच्या गुणवत्तेवर फारसा परिणाम होत नाही. तथापि, खरुज फळांना संधीसाधू रोगजनक आणि सडण्याच्या संपर्कात आणू शकतात, ज्यामुळे साठवण क्षमता आणि गुणवत्ता कमी होते. प्रभावित पाने बर्याचदा विकृत असतात आणि अकाली पडतात, ज्यामुळे जड संक्रमण झाल्यास डिफोलिएशन होते. शूटवर, संसर्गामुळे फोड आणि क्रॅकिंग होते जे नंतर संधीसाधू रोगजनकांना प्रवेश प्रदान करू शकते. फळांवर पृष्ठभागावर तपकिरी ते गडद तपकिरी वर्तुळाकार भाग दिसतात.',
+          'conditions': 'अनुकूल वातावरण परिस्थिती',
+          'appleScabConditions':
+              'ऍपल स्कॅब हा एक रोग आहे जो व्हेंटुरिया इनएक्वलिस या बुरशीमुळे होतो. हे हिवाळ्यामध्ये प्रामुख्याने जमिनीवरील संक्रमित पानांवर टिकते परंतु कळ्याच्या खवले किंवा लाकडावरील जखमांवर देखील टिकते. वसंत ऋतूच्या प्रारंभी, बुरशीची वाढ पुन्हा सुरू होते आणि बीजाणू तयार करण्यास सुरवात करतात, जे नंतर विसर्जित होतात आणि वाऱ्याने लांब अंतरावर पसरतात. हे बीजाणू विकसनशील पानांवर आणि फळांवर उतरतात आणि नवीन संसर्गास सुरुवात करतात. न उघडलेल्या फळांच्या कळ्यांचे बाहेरील भाग खपल्याला अतिसंवेदनशील असतात. तथापि, जसजसे फळ परिपक्व होते तसतसे ते कमी संवेदनाक्षम होते. ओलसर वातावरण, पाने किंवा फळे ओलावण्याचा कालावधी संसर्गासाठी आवश्यक आहे. पर्यायी यजमानांमध्ये Cotoneaster, Pyracantha आणि Sorbus या वंशाच्या झुडपांचा समावेश होतो. सर्व सफरचंद जाती स्कॅबसाठी संवेदनाक्षम आहेत, गाला अधिक असुरक्षित आहे.',
+          'remedies': 'व्यवस्थापन (उपाय)',
+          'appleScabRemedies':
+              '''1. सहनशील किंवा प्रतिरोधक वाण वापरा.\n\n२. रोगाच्या लक्षणांसाठी बागांचे निरीक्षण करा.\n\n३. प्रभावित पाने, कोंब आणि फळे उचला.\n\n4. कापणीनंतर तुमच्या झाडांच्या आजूबाजूची सर्व गळून पडलेली पाने काढा.\n\n५. वैकल्पिकरित्या, शरद ऋतूतील पानांवर 5% युरिया लावा जेणेकरून त्यांचे विघटन वाढेल आणि बुरशीच्या जीवन चक्रात अडथळा येईल.\n\n6. ऊतींचे विघटन जलद होण्यासाठी पानांचा जास्त कचरा देखील कापला जाऊ शकतो.\n\n७. छाटणी करण्याच्या पद्धतीची खात्री करा ज्यामुळे अधिक हवा परिसंचरण होईल.\n\n८. संध्याकाळी किंवा पहाटे पाणी द्या आणि ओव्हरहेड सिंचन टाळा.\n\n9. पाणी देताना झाडाची पाने ओली होणे टाळा.\n\n१०. मातीचा पीएच वाढवण्यासाठी पानांच्या गळतीनंतर चुना लावा.\n\n११. खोडापासून दूर ठेवून झाडाखाली पालापाचोळा पसरवा.''',
+          'chemicals': 'केमिकल/बायोलॉजिकल कंट्रोल',
+          'appleScabChemicals':
+              'मागील हंगामात रोगांचे प्रमाण जास्त असल्यास, हिवाळ्याच्या हंगामात झाडावरील बुरशीच्या वाढीस अडथळा आणण्यासाठी द्रव तांबे बुरशीनाशकांची फवारणी केली जाऊ शकते. सल्फर फवारण्या सफरचंदाच्या खपल्याविरूद्ध अंशतः प्रभावी असतात. तथापि, वाढत्या हंगामात रोगाच्या सेंद्रिय नियंत्रणासाठी सल्फर आणि पायरेथ्रिनयुक्त द्रावण उपलब्ध आहेत. उपलब्ध असल्यास जैविक उपचारांसह प्रतिबंधात्मक उपायांसह एकात्मिक दृष्टिकोनाचा नेहमी विचार करा. रोग टाळण्यासाठी डोडाइन, कॅप्टन किंवा डायनाथिऑन यांसारखी संरक्षक बुरशीनाशके बड ब्रेकच्या आसपास फवारली जाऊ शकतात. एकदा स्कॅब आढळल्यानंतर, बुरशीच्या विकासावर नियंत्रण ठेवण्यासाठी डायफेनोकोनाझोल, मायक्लोब्युटॅनिल किंवा सल्फरवर आधारित बुरशीनाशकांचा वापर केला जाऊ शकतो. प्रतिकारशक्तीचा विकास टाळण्यासाठी वेगवेगळ्या रासायनिक गटांतील स्कॅब बुरशीनाशकांचा वापर केल्याची खात्री करा.',
+          'peachBlackSpotChemicals':
+              '१. बॅक्टेरियाचे डाग दडपण्यासाठी जीवाणूनाशके उपलब्ध आहेत. सुरुवातीच्या उपचारांमध्ये पानांचा संसर्ग दडपण्यावर आणि नंतर फळांच्या संरक्षणावर लक्ष केंद्रित केले जाते कारण ते शुकमधून बाहेर पडतात.\n\n2. रोगाच्या विकासासाठी अत्यंत अनुकूल परिस्थितीत लक्षणे दूर करण्यासाठी जीवाणूनाशक उपचार पुरेसे असू शकत नाहीत. बॅक्टेरियाच्या डागांसाठी पीच आणि अमृतावर वापरण्यासाठी उपलब्ध संयुगांमध्ये तांबे, ऑक्सिटेट्रासाइक्लिन (मायकोशिल्ड आणि जेनेरिक समकक्ष) आणि सिलिट + कॅप्टन यांचा समावेश आहे; तथापि, कमीतकमी रोग नियंत्रणासाठी वारंवार अनुप्रयोग सामान्यत: आवश्यक असतात.\n\n3. ऑक्सिटेट्रासाइक्लिन सामान्यत: सर्वात प्रभावी कंपाऊंड मानले जाते आणि फायटोटॉक्सिसिटी समस्या (वनस्पतींच्या ऊतींचे नुकसान) होण्याची शक्यता सर्वात कमी असते, परंतु कदाचित प्रतिकार असलेल्या बॅक्टेरियाच्या ताणांच्या देखाव्यासह परिणामकारकता गमावण्याची शक्यता देखील असते.',
         }
       };
 }

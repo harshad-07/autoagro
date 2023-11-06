@@ -4,6 +4,7 @@ import 'package:autoagro_firebase/provider/auth_provider.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 class PhoneReg extends StatefulWidget {
@@ -14,7 +15,6 @@ class PhoneReg extends StatefulWidget {
 }
 
 class _LoginPageState extends State<PhoneReg> {
-
   bool isLoading = false;
 
   final _formKey = GlobalKey<FormState>();
@@ -41,22 +41,44 @@ class _LoginPageState extends State<PhoneReg> {
               // crossAxisAlignment: CrossAxisAlignment.center,
               // mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/images/welcome.svg', width: MediaQuery.sizeOf(context).width*0.67,),
-                SizedBox(height: 16,),
-                Text("Let's get started!", style: TextStyle(fontSize: 22), textAlign: TextAlign.center),
-                SizedBox(height: 20,),
-                Text("Please provide your mobile number.", style: TextStyle(fontSize: 16, ), textAlign: TextAlign.center),
-                SizedBox(height: 20,),
-                Text("Don't forget to select your correct contry code!", style: TextStyle(fontSize: 15.2, color: Colors.green.shade700, fontWeight: FontWeight.w700), textAlign: TextAlign.center),
-                SizedBox(height: 50,),
+                SvgPicture.asset(
+                  'assets/images/welcome.svg',
+                  width: MediaQuery.sizeOf(context).width * 0.67,
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Text("start".tr,
+                    style: TextStyle(fontSize: 22),
+                    textAlign: TextAlign.center),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("provide".tr,
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                    textAlign: TextAlign.center),
+                SizedBox(
+                  height: 20,
+                ),
+                Text("code".tr,
+                    style: TextStyle(
+                        fontSize: 15.2,
+                        color: Colors.green.shade700,
+                        fontWeight: FontWeight.w700),
+                    textAlign: TextAlign.center),
+                SizedBox(
+                  height: 50,
+                ),
                 TextFormField(
-                  onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
+                  onTapOutside: (event) =>
+                      FocusManager.instance.primaryFocus?.unfocus(),
                   controller: number,
                   validator: (value) {
-                    if(value!.isEmpty){
+                    if (value!.isEmpty) {
                       return "Please Enter The Phone Number";
-                    }
-                    else if(value.length < 7){
+                    } else if (value.length < 7) {
                       return "Please Enter The Valid Number";
                     }
                     return null;
@@ -65,14 +87,21 @@ class _LoginPageState extends State<PhoneReg> {
                   textInputAction: TextInputAction.done,
                   maxLines: 1,
                   decoration: InputDecoration(
-                    errorBorder: OutlineInputBorder(borderSide: BorderSide(width: 2, color: Colors.red), borderRadius: BorderRadius.circular(10)),
-                    focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green.shade700, width: 2), borderRadius: BorderRadius.circular(10)),
-                    hintText: "Enter your phone number",
+                    errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(width: 2, color: Colors.red),
+                        borderRadius: BorderRadius.circular(10)),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Colors.green.shade700, width: 2),
+                        borderRadius: BorderRadius.circular(10)),
+                    hintText: "enterPhone".tr,
                     // labelText: "Phone Number",
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
                     prefixIcon: GestureDetector(
-                      onTap: () async{
-                        final code = await countryPicker.showPicker(context: context);
+                      onTap: () async {
+                        final code =
+                            await countryPicker.showPicker(context: context);
                         setState(() {
                           countryCode = code;
                           print(countryCode!.dialCode);
@@ -83,43 +112,70 @@ class _LoginPageState extends State<PhoneReg> {
                         margin: EdgeInsets.only(right: 15),
                         height: 60,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10), color: Colors.green.shade500
-                        ),
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.green.shade500),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Container(padding: EdgeInsets.only(left: 2),width: 55, child: Center(child: countryCode != null ? countryCode!.flagImage() : Text("🇮🇳", style: TextStyle(fontSize: 22),))),
+                            Container(
+                                padding: EdgeInsets.only(left: 2),
+                                width: 55,
+                                child: Center(
+                                    child: countryCode != null
+                                        ? countryCode!.flagImage()
+                                        : Text(
+                                            "🇮🇳",
+                                            style: TextStyle(fontSize: 22),
+                                          ))),
                             Padding(
                               padding: const EdgeInsets.only(left: 5),
-                              child: Text(countryCode?.dialCode ?? "+91", style: TextStyle(color: Colors.white, fontSize: 12),),
+                              child: Text(
+                                countryCode?.dialCode ?? "+91",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12),
+                              ),
                             ),
-                            Icon(Icons.arrow_drop_down_outlined, color: Colors.black,)
+                            Icon(
+                              Icons.arrow_drop_down_outlined,
+                              color: Colors.black,
+                            )
                           ],
                         ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 50,),
+                SizedBox(
+                  height: 50,
+                ),
                 SizedBox(
                   height: 45,
-                  width: MediaQuery.sizeOf(context).width*0.7,
+                  width: MediaQuery.sizeOf(context).width * 0.7,
                   child: ElevatedButton(
-                    onPressed: (){
+                    onPressed: () {
                       setState(() {
                         isLoading = true;
                       });
                       // if(_formKey.currentState!.validate()){Navigator.push(context, MaterialPageRoute(builder: (context) => Otp(verificationId: verificationId)));};
-                      if(_formKey.currentState!.validate()){
-                        debugPrint(countryCode != null ? "${countryCode!.dialCode} ${number.text}" : "+91 ${number.text}");
+                      if (_formKey.currentState!.validate()) {
+                        debugPrint(countryCode != null
+                            ? "${countryCode!.dialCode} ${number.text}"
+                            : "+91 ${number.text}");
                         sendPhoneNumber();
                         // setState(() {
                         //   isLoading = false;
                         // });
                       }
-                    }, 
-                    child: isLoading ? CircularProgressIndicator(color: Colors.white,) : Text("Get Code", style: TextStyle(fontSize: 18)),
-                    style: ElevatedButton.styleFrom(backgroundColor: Colors.green.shade700,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                    },
+                    child: isLoading
+                        ? CircularProgressIndicator(
+                            color: Colors.white,
+                          )
+                        : Text("getCode".tr, style: TextStyle(fontSize: 18)),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green.shade700,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10))),
                   ),
                 ),
                 // SizedBox(height: 30,),
@@ -150,15 +206,18 @@ class _LoginPageState extends State<PhoneReg> {
     );
   }
 
-  void sendPhoneNumber(){
+  void sendPhoneNumber() {
     final ap = Provider.of<AuthProvider>(context, listen: false);
     String phoneNumber = number.text.trim();
-    ap.signInWithPhone(context, countryCode != null ? "${countryCode!.dialCode} $phoneNumber" : "+91 $phoneNumber");
+    ap.signInWithPhone(
+        context,
+        countryCode != null
+            ? "${countryCode!.dialCode} $phoneNumber"
+            : "+91 $phoneNumber");
     // setState(() {
     //   isLoading = false;
     // });
   }
-
 }
 
 

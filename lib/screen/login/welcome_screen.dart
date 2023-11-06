@@ -1,4 +1,5 @@
 import 'package:autoagro_firebase/provider/auth_provider.dart';
+import 'package:autoagro_firebase/screen/login/choose_lang.dart';
 // import 'package:autoagro_firebase/screen/diseaseDetection/disease_detection.dart';
 // import 'package:autoagro_firebase/screen/login/options_page.dart';
 import 'package:autoagro_firebase/screen/login/phone.dart';
@@ -23,7 +24,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric( horizontal: 35),
+          padding: const EdgeInsets.symmetric(horizontal: 35),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -56,20 +57,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: CustomButton(
                   onPressed: () async {
                     if (ap.isSignedIn == true) {
-                      await ap.getDataFromSP().whenComplete(
-                            () =>
-                             Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const HomePage(),
-                              ),
-                            )
-                          );
+                      await ap
+                          .getDataFromSP()
+                          .whenComplete(() => Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const HomePage(),
+                                ),
+                              ));
                     } else {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const PhoneReg(),
+                          builder: (context) => const ChooseLang(),
                         ),
                       );
                     }
