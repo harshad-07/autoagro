@@ -40,12 +40,12 @@ class _HeaderWidgetState extends State<HeaderWidget> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.fromLTRB(25, 35, 0, 0),
+          margin: const EdgeInsets.fromLTRB(25, 35, 0, 0),
           alignment: Alignment.topLeft,
-          child: Text(area + ", " + city, style: TextStyle(fontSize: 20)),
+          child: Text("$area, $city", style: const TextStyle(fontSize: 20)),
         ),
         Container(
-          margin: EdgeInsets.fromLTRB(25, 5, 0, 0),
+          margin: const EdgeInsets.fromLTRB(25, 5, 0, 0),
           alignment: Alignment.topLeft,
           child: Text(date, style: TextStyle(fontSize: 14, color: Colors.grey.shade800)),
         ),

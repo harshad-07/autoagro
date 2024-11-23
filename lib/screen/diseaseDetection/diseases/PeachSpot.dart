@@ -39,7 +39,7 @@ class PeachSpotState extends State<PeachSpot> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(Icons.arrow_back_rounded),
+              icon: const Icon(Icons.arrow_back_rounded),
               alignment: Alignment.topLeft,
               iconSize: 27),
         ),
@@ -55,7 +55,7 @@ class PeachSpotState extends State<PeachSpot> {
                   setState(() => activeIndex = index),
             )),
         Padding(
-          padding: EdgeInsets.only(top: 27, left: 20, right: 20),
+          padding: const EdgeInsets.only(top: 27, left: 20, right: 20),
           child: Container(
               height: 100.0,
               width: MediaQuery.of(context).size.width - 24.0,
@@ -68,7 +68,7 @@ class PeachSpotState extends State<PeachSpot> {
                         color: Colors.grey.withOpacity(0.3),
                         spreadRadius: 2.0)
                   ]),
-              child: Padding(
+              child: const Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -76,7 +76,7 @@ class PeachSpotState extends State<PeachSpot> {
                   children: <Widget>[
                     Text(
                       'Peach Bacterial Spot',
-                      style: new TextStyle(
+                      style: TextStyle(
                         fontFamily: "VT323",
                         fontWeight: FontWeight.bold,
                         fontSize: 22.0,
@@ -84,7 +84,7 @@ class PeachSpotState extends State<PeachSpot> {
                     ),
                     Text(
                       'Xanthomonas campestris pv. pruni',
-                      style: new TextStyle(
+                      style: TextStyle(
                         fontSize: 15.0,
                       ),
                     ),
@@ -98,63 +98,63 @@ class PeachSpotState extends State<PeachSpot> {
         //   elevation: 0,
         // ),
         Padding(
-          padding: EdgeInsets.only(top: 36, bottom: 20, left: 14),
+          padding: const EdgeInsets.only(top: 36, bottom: 20, left: 14),
           child: Text(
             'symptoms'.tr,
-            style: TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+            style: const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
+          padding: const EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
           child: Text(
-            '1. Symptoms of this disease include fruit spots, leaf spots, and twig cankers. Fruit symptoms include pitting, cracking, gumming, and watersoaked tissue, which can make the fruit more susceptible to brown rot, rhizopus, and other fungal infections.\n\n2. Severe leaf spot infections can cause early defoliation. Severe defoliation can result in reduced fruit size, and sunburn and cracking of fruit.\n\n3. Early defoliated trees are reduced in vigor and winter hardiness. Fruit symptoms of bacterial spot may be confused with peach scab, caused by the fungus Cladosporium carpophyllium, however scab spots are more circular, have a dark brown/greenish, fuzzy appearance, and do not pit the fruit surface, although skin cracking can occur.\n\n4. Scab does not cause leaf symptoms but can cause spots on twigs. Initial fruit spots of bacterial spot may be superficial but develop into craters. Leaf symptoms of bacterial spot on peaches and nectarines are generally dark, small lesions, often clustered at the leaf tip where water collects during dews and rain. Leaf tissue around lesions can turn yellow.',
+            'peachBlackSpotSymptoms'.tr,
             textAlign: TextAlign.justify,
-            style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
+            style: const TextStyle(fontSize: 17, fontFamily: 'Raleway'),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 40, bottom: 20, left: 14),
+          padding: const EdgeInsets.only(top: 40, bottom: 20, left: 14),
           child: Text(
             'conditions'.tr,
-            style: TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+            style: const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
+          padding: const EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
           child: Text(
-            '1. The pathogen for bacterial spot overwinters in protected areas such as cracks in the bark and in leaf scars that were infected the previous season. As temperatures rise over 65 degrees F. (18 C.) and budding begins, the bacteria begin to multiply.\n\n2. They are spread from cankers via dripping dew, rain splashing or wind. Severe fruit infections occur most frequently when there is ample rainfall combined with high humidity.\n\n3. The infection is also most severe when the trees are planted in light, sandy soil and/or if trees are stressed. Bacterial spot symptoms on leaves generally are not seen until after bloom but onset can occur earlier if conditions are highly favorable.\n\n4. Fruit are very susceptible when exposed after shuck split and the susceptibility goes down after pit hardening in mid- to late June.',
+            'peachBlackSpotConditions'.tr,
             textAlign: TextAlign.justify,
-            style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
+            style: const TextStyle(fontSize: 17, fontFamily: 'Raleway'),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 40, bottom: 20, left: 14),
+          padding: const EdgeInsets.only(top: 40, bottom: 20, left: 14),
           child: Text(
             'remedies'.tr,
-            style: TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+            style: const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
+          padding: const EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
           child: Text(
-            'Whenever possible and practical, the best strategy is to use cultivars with better bacterial spot resistance. Protect trees from strong winds by establishing shelter belt trees on the windward side of the orchard. Another strategy is to establish sod strips between trees and to use gravel or other dust-suppressing methods on nearby dirt roads. Removal of gummy-blackened branch tips typical of bacterial spot during spring pruning may help somewhat to reduce inoculum levels. Fertilize where needed to maintain vigorous but not excessive shoot growth.',
+            'peachBlackSpotRemedies'.tr,
             textAlign: TextAlign.justify,
-            style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
+            style: const TextStyle(fontSize: 17, fontFamily: 'Raleway'),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 40, bottom: 20, left: 14),
+          padding: const EdgeInsets.only(top: 40, bottom: 20, left: 14),
           child: Text(
             'chemicals'.tr,
-            style: TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+            style: const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
+          padding: const EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
           child: Text(
             'peachBlackSpotChemicals'.tr,
             textAlign: TextAlign.justify,
-            style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
+            style: const TextStyle(fontSize: 17, fontFamily: 'Raleway'),
           ),
         ),
       ],
@@ -180,7 +180,7 @@ class PeachSpotState extends State<PeachSpot> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 1.0),
+                      offset: const Offset(0, 1.0),
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 0.2)
                 ]),
@@ -192,7 +192,7 @@ class PeachSpotState extends State<PeachSpot> {
                   height: 40.0,
                   width: 40.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(features1)
@@ -206,7 +206,7 @@ class PeachSpotState extends State<PeachSpot> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 1.0),
+                      offset: const Offset(0, 1.0),
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 0.2)
                 ]),
@@ -218,7 +218,7 @@ class PeachSpotState extends State<PeachSpot> {
                   height: 40.0,
                   width: 40.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(features2)
@@ -232,7 +232,7 @@ class PeachSpotState extends State<PeachSpot> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 1.0),
+                      offset: const Offset(0, 1.0),
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 0.2)
                 ]),
@@ -244,7 +244,7 @@ class PeachSpotState extends State<PeachSpot> {
                   height: 40.0,
                   width: 40.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(features3)
@@ -256,7 +256,7 @@ class PeachSpotState extends State<PeachSpot> {
 
   Widget buildImage(String urlImage, int index) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 7),
+      margin: const EdgeInsets.symmetric(horizontal: 7),
       child: Image.network(urlImage, fit: BoxFit.cover),
     );
   }
@@ -265,7 +265,7 @@ class PeachSpotState extends State<PeachSpot> {
     return AnimatedSmoothIndicator(
       activeIndex: activeIndex,
       count: urlImage.length,
-      effect: ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.green),
+      effect: const ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.green),
     );
   }
 
@@ -273,13 +273,13 @@ class PeachSpotState extends State<PeachSpot> {
     String description,
   ) {
     return Padding(
-        padding: EdgeInsets.only(left: 14, top: 6, right: 14),
+        padding: const EdgeInsets.only(left: 14, top: 6, right: 14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
               description,
-              style: TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+              style: const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
             ),
           ],
         ));

@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class IoTPage extends StatelessWidget {
+  const IoTPage({super.key});
+
   // Conditions temp, humid;
 
   // IoTPage({required this.temp,required this.humid,super.key});
@@ -16,10 +18,10 @@ class IoTPage extends StatelessWidget {
     var w = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 9, 36, 18),
+      backgroundColor: const Color.fromARGB(255, 9, 36, 18),
       body: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(50)),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(50)),
             color: Colors.white.withOpacity(0.85)),
         // height: MediaQuery.of(context).size.height,
         // width: MediaQuery.of(context).size.width,
@@ -28,46 +30,46 @@ class IoTPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 25),
               child: ListView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 24),
+                    margin: const EdgeInsets.symmetric(horizontal: 24),
                     width: w * 0.9,
                     height: 300,
                     decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.95),
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(8),
                             bottomRight: Radius.circular(8),
                             topLeft: Radius.circular(8),
                             topRight: Radius.circular(69)),
                         boxShadow: [
                           BoxShadow(
-                              color: Color(0xFF3A5160).withOpacity(0.2),
-                              offset: Offset(1.1, 1.1),
+                              color: const Color(0xFF3A5160).withOpacity(0.2),
+                              offset: const Offset(1.1, 1.1),
                               blurRadius: 10)
                         ]),
-                    child: Center(child: Indicators()),
+                    child: const Center(child: Indicators()),
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 24),
+                    margin: const EdgeInsets.symmetric(horizontal: 24),
                     width: w * 0.9,
                     height: 300,
                     decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.95),
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(8),
                             bottomRight: Radius.circular(8),
                             topLeft: Radius.circular(8),
                             topRight: Radius.circular(69)),
                         boxShadow: [
                           BoxShadow(
-                              color: Color(0xFF3A5160).withOpacity(0.2),
-                              offset: Offset(1.1, 1.1),
+                              color: const Color(0xFF3A5160).withOpacity(0.2),
+                              offset: const Offset(1.1, 1.1),
                               blurRadius: 10)
                         ]),
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Moisture(),
@@ -77,27 +79,27 @@ class IoTPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   Container(
-                    padding: EdgeInsets.all(21),
-                    margin: EdgeInsets.symmetric(horizontal: 24),
+                    padding: const EdgeInsets.all(21),
+                    margin: const EdgeInsets.symmetric(horizontal: 24),
                     decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.95),
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(8),
                             bottomRight: Radius.circular(8),
                             topLeft: Radius.circular(8),
                             topRight: Radius.circular(69)),
                         boxShadow: [
                           BoxShadow(
-                              color: Color(0xFF3A5160).withOpacity(0.2),
-                              offset: Offset(1.1, 1.1),
+                              color: const Color(0xFF3A5160).withOpacity(0.2),
+                              offset: const Offset(1.1, 1.1),
                               blurRadius: 10)
                         ]),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text('Pump :',
+                        const Text('Pump :',
                             style: TextStyle(
                                 fontWeight: FontWeight.w600, fontSize: 16)),
                         LiteRollingSwitch(
@@ -113,7 +115,7 @@ class IoTPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   // Moisture2()
                   // Container(
                   //   height: 300,
@@ -124,17 +126,17 @@ class IoTPage extends StatelessWidget {
               ),
             ),
             AnimatedContainer(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(20),
                     topRight: Radius.circular(20),
                     topLeft: Radius.elliptical(8.5, 25)),
                 color: Colors.blue,
               ),
-              margin: EdgeInsets.only(top: 25),
-              duration: Duration(milliseconds: 500),
-              child: Padding(
-                padding: const EdgeInsets.all(18.0),
+              margin: const EdgeInsets.only(top: 25),
+              duration: const Duration(milliseconds: 500),
+              child: const Padding(
+                padding: EdgeInsets.all(18.0),
                 child: Text("IoT Device",
                     style: TextStyle(
                         color: Colors.white,

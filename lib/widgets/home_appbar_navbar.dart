@@ -27,39 +27,39 @@ final controller = PersistentTabController(initialIndex: 0);
 
 List<Widget> _buildScreen() {
   return [
-    DiseaseDetection(),
-    IoTPage(),
-    ToolRentingPage(),
-    WeatherPage(),
+    const DiseaseDetection(),
+    const IoTPage(),
+    const ToolRentingPage(),
+    const WeatherPage(),
   ];
 }
 
 List<PersistentBottomNavBarItem> _navBarItems() {
   return [
     PersistentBottomNavBarItem(
-        icon: Icon(Icons.camera_alt),
-        inactiveIcon: Icon(Icons.camera_alt_outlined),
+        icon: const Icon(Icons.camera_alt),
+        inactiveIcon: const Icon(Icons.camera_alt_outlined),
         activeColorPrimary: Colors.green.shade800,
         title: ("Detect".tr),
-        textStyle: TextStyle(fontWeight: FontWeight.bold)),
+        textStyle: const TextStyle(fontWeight: FontWeight.bold)),
     PersistentBottomNavBarItem(
-        icon: Icon(Icons.offline_bolt),
-        inactiveIcon: Icon(Icons.offline_bolt_outlined),
+        icon: const Icon(Icons.offline_bolt),
+        inactiveIcon: const Icon(Icons.offline_bolt_outlined),
         activeColorPrimary: Colors.blue.shade800,
         title: ("IoT"),
-        textStyle: TextStyle(fontWeight: FontWeight.bold)),
+        textStyle: const TextStyle(fontWeight: FontWeight.bold)),
     PersistentBottomNavBarItem(
-        icon: Icon(Icons.build_circle),
-        inactiveIcon: Icon(Icons.build_circle_outlined),
+        icon: const Icon(Icons.build_circle),
+        inactiveIcon: const Icon(Icons.build_circle_outlined),
         activeColorPrimary: Colors.grey.shade800,
         title: ("Services".tr),
-        textStyle: TextStyle(fontWeight: FontWeight.bold)),
+        textStyle: const TextStyle(fontWeight: FontWeight.bold)),
     PersistentBottomNavBarItem(
-        icon: Icon(Icons.wb_sunny),
-        inactiveIcon: Icon(Icons.wb_sunny_outlined),
+        icon: const Icon(Icons.wb_sunny),
+        inactiveIcon: const Icon(Icons.wb_sunny_outlined),
         activeColorPrimary: Colors.yellow.shade900,
         title: ("Weather".tr),
-        textStyle: TextStyle(fontWeight: FontWeight.bold)),
+        textStyle: const TextStyle(fontWeight: FontWeight.bold)),
   ];
 }
 
@@ -77,13 +77,13 @@ class _HomePageState extends State<HomePage> {
         leading: Builder(builder: (context) {
           return IconButton(
               onPressed: () => Scaffold.of(context).openDrawer(),
-              icon: Icon(
+              icon: const Icon(
                 Icons.border_all_rounded,
                 size: 30,
               ));
         }),
-        title: Text("AutoAgro"),
-        backgroundColor: Color.fromARGB(255, 9, 36, 18),
+        title: const Text("AutoAgro"),
+        backgroundColor: const Color.fromARGB(255, 9, 36, 18),
         elevation: 0,
         actions: [
           IconButton(
@@ -98,31 +98,31 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         TextButton(
                             onPressed: () {
-                              var locale = Locale('mr', 'IN');
+                              var locale = const Locale('mr', 'IN');
                               Get.updateLocale(locale);
                               Navigator.pop(context);
                             },
-                            child: Text(
+                            child: const Text(
                               "मराठी",
                               style: TextStyle(fontSize: 16),
                             )),
                         TextButton(
                             onPressed: () {
-                              var locale = Locale('hi', 'IN');
+                              var locale = const Locale('hi', 'IN');
                               Get.updateLocale(locale);
                               Navigator.pop(context);
                             },
-                            child: Text(
+                            child: const Text(
                               "हिंदी",
                               style: TextStyle(fontSize: 16),
                             )),
                         TextButton(
                             onPressed: () {
-                              var locale = Locale('en', 'US');
+                              var locale = const Locale('en', 'US');
                               Get.updateLocale(locale);
                               Navigator.pop(context);
                             },
-                            child: Text(
+                            child: const Text(
                               "English",
                               style: TextStyle(fontSize: 16),
                             )),
@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               );
             },
-            icon: Icon(Icons.translate_rounded),
+            icon: const Icon(Icons.translate_rounded),
             tooltip: "Translate",
           ),
           Padding(
@@ -146,24 +146,24 @@ class _HomePageState extends State<HomePage> {
                   context: context,
                   builder: (context) => AlertDialog(
                     backgroundColor: Colors.white,
-                    title: Text("Confirmation",
+                    title: const Text("Confirmation",
                         style: TextStyle(
                             color: Colors.black, fontWeight: FontWeight.bold)),
                     content: Text(
                       "logout?".tr,
-                      style: TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.black),
                     ),
                     actions: [
                       TextButton(
                         child: Text(
                           "Yes".tr,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                           ),
                         ),
                         onPressed: () async {
                           await ap.userSignOut().then(
-                                (value) => Navigator.push(
+                                (value) => Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) => const WelcomeScreen(),
@@ -183,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                             backgroundColor: MaterialStatePropertyAll(
                                 Colors.green.shade100)),
                         child: Text("No".tr,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.green,
                             )),
                         onPressed: () {
@@ -200,7 +200,7 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                     color: Colors.green.shade200,
                     borderRadius: BorderRadius.circular(100),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                         image: AssetImage('assets/icons/user.png'))),
                 width: 45,
                 height: 45,
@@ -218,7 +218,7 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
       body: navBar(context),
     );
   }
@@ -234,7 +234,7 @@ navBar(BuildContext context) {
     backgroundColor: Colors.green.shade50,
     resizeToAvoidBottomInset: true,
     stateManagement: true,
-    screenTransitionAnimation: ScreenTransitionAnimation(
+    screenTransitionAnimation: const ScreenTransitionAnimation(
         animateTabTransition: true,
         curve: Curves.fastEaseInToSlowEaseOut,
         duration: Duration(milliseconds: 500)),

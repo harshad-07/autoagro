@@ -21,7 +21,7 @@ class SplashService{
 
     // final user = auth.currentUser;
 
-    Timer(Duration(seconds: 5), () async{
+    Timer(const Duration(seconds: 5), () async{
       if (ap.isSignedIn == true) {
         await ap.getDataFromSP().whenComplete(
               () =>

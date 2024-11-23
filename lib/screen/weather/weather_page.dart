@@ -30,29 +30,29 @@ class _WeatherPageState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 9, 36, 18),
+      backgroundColor: const Color.fromARGB(255, 9, 36, 18),
       body: Obx(() => controller.checkLoading().isTrue ? 
         Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('assets/icons/clouds.png'),
-              CircularProgressIndicator(),
+              const CircularProgressIndicator(),
             ],
           ),
         )
         : Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.vertical(top: Radius.circular(50)), color: Colors.white.withOpacity(0.85)),
+          decoration: BoxDecoration(borderRadius: const BorderRadius.vertical(top: Radius.circular(50)), color: Colors.white.withOpacity(0.85)),
           child: RefreshIndicator(
             onRefresh: _refresh,
             child: ListView(
               children: [
-                HeaderWidget(),
-                SizedBox(height: 12),
+                const HeaderWidget(),
+                const SizedBox(height: 12),
                 CurrentWeatherWidget(data: controller.getWeatherData().getCurrentWeatherData()),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 HourlyWeatherWidget(data: controller.getWeatherData().getHourlyWeatherData(),),
-                SizedBox(height: 12),
+                const SizedBox(height: 12),
                 DailyWeatherWidget(data: controller.getWeatherData().getDailyWeatherData()),
               ],
             ),

@@ -19,7 +19,7 @@ Widget formTextField({
       validator: validator,
       onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
       cursorColor: Colors.green.shade700,
-      style: TextStyle( fontSize: 18),
+      style: const TextStyle( fontSize: 18),
       cursorHeight: 24,
       maxLengthEnforcement: MaxLengthEnforcement.enforced,
       decoration: InputDecoration(
@@ -32,7 +32,7 @@ Widget formTextField({
         hintText: hintText,
         labelText: labelText,
         labelStyle: TextStyle(color: Colors.green.shade700),
-        contentPadding: EdgeInsets.all(22),
+        contentPadding: const EdgeInsets.all(22),
         // hintStyle: TextStyle(color: Colors.white70),
         enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), ),
         focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), ),

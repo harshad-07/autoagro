@@ -50,12 +50,12 @@ class GetStarted extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ChooseLang()));
+                              builder: (context) => const ChooseLang()));
                     },
-                    child: Text("Get Started", style: TextStyle(fontSize: 18)),
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
+                    child: const Text("Get Started", style: TextStyle(fontSize: 18)),
                   ),
                 ),
                 // custom button

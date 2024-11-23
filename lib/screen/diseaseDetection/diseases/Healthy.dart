@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 // import 'package:carousel_pro/carousel_pro.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -29,7 +30,7 @@ class HealthyState extends State<Healthy> {
         appBar: AppBar(
             elevation: 0,
             backgroundColor: Colors.white60,
-            iconTheme: IconThemeData(color: Colors.black)),
+            iconTheme: const IconThemeData(color: Colors.black)),
         body: ListView(
           children: <Widget>[
             Stack(
@@ -39,7 +40,7 @@ class HealthyState extends State<Healthy> {
                     child: Stack(
                       children: <Widget>[
                         Hero(
-                            tag: "Healthy Crops",
+                            tag: "Healthy Crops".tr,
                             child: CarouselSlider.builder(
                                 itemCount: urlImage.length,
                                 itemBuilder: (context, index, realIndex) {
@@ -54,7 +55,7 @@ class HealthyState extends State<Healthy> {
                       ],
                     )),
                 Padding(
-                  padding: EdgeInsets.only(top: 270, left: 20, right: 20),
+                  padding: const EdgeInsets.only(top: 270, left: 20, right: 20),
                   child: Container(
                       height: 100.0,
                       width: MediaQuery.of(context).size.width - 24.0,
@@ -68,22 +69,22 @@ class HealthyState extends State<Healthy> {
                                 spreadRadius: 2.0)
                           ]),
                       child: Padding(
-                        padding: EdgeInsets.only(left: 20),
+                        padding: const EdgeInsets.only(left: 20),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              'Excellent',
-                              style: new TextStyle(
+                              'Excellent'.tr,
+                              style: const TextStyle(
                                 fontFamily: "VT323",
                                 fontWeight: FontWeight.bold,
                                 fontSize: 22.0,
                               ),
                             ),
                             Text(
-                              'Your crop is healthy. Keep it Up!',
-                              style: new TextStyle(
+                              'Your crop is healthy. Keep it Up!'.tr,
+                              style: const TextStyle(
                                 fontSize: 15.0,
                               ),
                             ),
@@ -92,13 +93,13 @@ class HealthyState extends State<Healthy> {
                       )),
                 ),
                 AppBar(
-                  iconTheme: IconThemeData(color: Colors.white),
+                  iconTheme: const IconThemeData(color: Colors.white),
                   backgroundColor: Colors.transparent,
                   elevation: 0,
                 ),
               ],
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(top: 60, bottom: 20, left: 14),
               child: Text(
                 'NOTE',
@@ -108,11 +109,11 @@ class HealthyState extends State<Healthy> {
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
+                  const EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
               child: Text(
-                '1. Keep monitoring your crop.\n\n2. Water your plant regularly and supply with proper fertilisers.\n\n3. Also, keep checking the water level with the help of app.\n\n4. Take descisions keeping the soil conditions in mind.',
+                'note'.tr,
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
+                style: const TextStyle(fontSize: 17, fontFamily: 'Raleway'),
               ),
             ),
           ],
@@ -138,7 +139,7 @@ class HealthyState extends State<Healthy> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 1.0),
+                      offset: const Offset(0, 1.0),
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 0.2)
                 ]),
@@ -150,7 +151,7 @@ class HealthyState extends State<Healthy> {
                   height: 40.0,
                   width: 40.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(features1)
@@ -164,7 +165,7 @@ class HealthyState extends State<Healthy> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 1.0),
+                      offset: const Offset(0, 1.0),
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 0.2)
                 ]),
@@ -176,7 +177,7 @@ class HealthyState extends State<Healthy> {
                   height: 40.0,
                   width: 40.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(features2)
@@ -190,7 +191,7 @@ class HealthyState extends State<Healthy> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 1.0),
+                      offset: const Offset(0, 1.0),
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 0.2)
                 ]),
@@ -202,7 +203,7 @@ class HealthyState extends State<Healthy> {
                   height: 40.0,
                   width: 40.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(features3)
@@ -214,7 +215,7 @@ class HealthyState extends State<Healthy> {
 
   Widget buildImage(String urlImage, int index) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 7),
+      margin: const EdgeInsets.symmetric(horizontal: 7),
       child: Image.network(urlImage, fit: BoxFit.cover),
     );
   }
@@ -223,7 +224,7 @@ class HealthyState extends State<Healthy> {
     return AnimatedSmoothIndicator(
       activeIndex: activeIndex,
       count: urlImage.length,
-      effect: ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.green),
+      effect: const ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.green),
     );
   }
 
@@ -231,13 +232,13 @@ class HealthyState extends State<Healthy> {
     String description,
   ) {
     return Padding(
-        padding: EdgeInsets.only(left: 14, top: 6, right: 14),
+        padding: const EdgeInsets.only(left: 14, top: 6, right: 14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
               description,
-              style: TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+              style: const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
             ),
           ],
         ));

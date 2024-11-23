@@ -33,7 +33,7 @@ class _AppleScabState extends State<AppleScab> {
         //     iconTheme: IconThemeData(color: Colors.black)),
         body: SafeArea(
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             // color: Colors.white.withOpacity(0.9),
             borderRadius: BorderRadius.vertical(top: Radius.circular(50))),
         // padding: EdgeInsets.all(32),
@@ -45,7 +45,7 @@ class _AppleScabState extends State<AppleScab> {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  icon: Icon(Icons.arrow_back_rounded),
+                  icon: const Icon(Icons.arrow_back_rounded),
                   alignment: Alignment.topLeft,
                   iconSize: 27),
             ),
@@ -61,7 +61,7 @@ class _AppleScabState extends State<AppleScab> {
                       setState(() => activeIndex = index),
                 )),
             Padding(
-              padding: EdgeInsets.only(left: 20, right: 20),
+              padding: const EdgeInsets.only(left: 20, right: 20),
               child: Container(
                   height: 100.0,
                   width: MediaQuery.of(context).size.width - 24.0,
@@ -74,7 +74,7 @@ class _AppleScabState extends State<AppleScab> {
                             color: Colors.grey.withOpacity(0.3),
                             spreadRadius: 2.0)
                       ]),
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.only(left: 20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -82,7 +82,7 @@ class _AppleScabState extends State<AppleScab> {
                       children: [
                         Text(
                           'Apple Scab',
-                          style: new TextStyle(
+                          style: TextStyle(
                             fontFamily: "VT323",
                             fontWeight: FontWeight.bold,
                             fontSize: 22.0,
@@ -90,7 +90,7 @@ class _AppleScabState extends State<AppleScab> {
                         ),
                         Text(
                           'Venturia Inaequalis',
-                          style: new TextStyle(
+                          style: TextStyle(
                             fontSize: 15.0,
                           ),
                         ),
@@ -100,74 +100,74 @@ class _AppleScabState extends State<AppleScab> {
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 60, bottom: 20, left: 14, right: 14),
+                  const EdgeInsets.only(top: 60, bottom: 20, left: 14, right: 14),
               child: Text(
                 'symptoms'.tr,
                 style:
-                    TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+                    const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
               ),
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
+                  const EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
               child: Text(
                 'appleScabSymtoms'.tr,
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
+                style: const TextStyle(fontSize: 17, fontFamily: 'Raleway'),
               ),
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
+                  const EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
               child: Text(
                 'conditions'.tr,
                 style:
-                    TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+                    const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
               ),
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
+                  const EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
               child: Text(
                 'appleScabConditions'.tr,
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
+                style: const TextStyle(fontSize: 17, fontFamily: 'Raleway'),
               ),
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
+                  const EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
               child: Text(
                 'remedies'.tr,
                 style:
-                    TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+                    const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
               ),
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
+                  const EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
               child: Text(
                 'appleScabRemedies'.tr,
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
+                style: const TextStyle(fontSize: 17, fontFamily: 'Raleway'),
               ),
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
+                  const EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
               child: Text(
                 'chemicals'.tr,
                 style:
-                    TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+                    const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
               ),
             ),
             Padding(
               padding:
-                  EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
+                  const EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
               child: Text(
                 'appleScabChemicals'.tr,
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontSize: 17, fontFamily: 'Raleway'),
+                style: const TextStyle(fontSize: 17, fontFamily: 'Raleway'),
               ),
             ),
           ],
@@ -178,7 +178,7 @@ class _AppleScabState extends State<AppleScab> {
 
   Widget buildImage(String urlImage, int index) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 7),
+      margin: const EdgeInsets.symmetric(horizontal: 7),
       child: Image.network(urlImage, fit: BoxFit.cover),
     );
   }
@@ -187,7 +187,7 @@ class _AppleScabState extends State<AppleScab> {
     return AnimatedSmoothIndicator(
       activeIndex: activeIndex,
       count: urlImage.length,
-      effect: ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.green),
+      effect: const ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.green),
     );
   }
 }

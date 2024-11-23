@@ -2,7 +2,6 @@ import 'package:autoagro_firebase/provider/auth_provider.dart';
 import 'package:autoagro_firebase/screen/login/choose_lang.dart';
 // import 'package:autoagro_firebase/screen/diseaseDetection/disease_detection.dart';
 // import 'package:autoagro_firebase/screen/login/options_page.dart';
-import 'package:autoagro_firebase/screen/login/phone.dart';
 import 'package:autoagro_firebase/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

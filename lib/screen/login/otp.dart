@@ -35,7 +35,7 @@ class _OtpState extends State<Otp> {
       appBar: AppBar(
           backgroundColor: Colors.white30,
           elevation: 0,
-          iconTheme: IconThemeData(color: Colors.black)),
+          iconTheme: const IconThemeData(color: Colors.black)),
       body: isLoading == true
           ? const Center(
               child: CircularProgressIndicator(
@@ -45,8 +45,8 @@ class _OtpState extends State<Otp> {
           : Form(
               key: _formKey,
               child: Container(
-                padding: EdgeInsets.all(0),
-                margin: EdgeInsets.only(
+                padding: const EdgeInsets.all(0),
+                margin: const EdgeInsets.only(
                   left: 30,
                   right: 30,
                 ),
@@ -59,22 +59,22 @@ class _OtpState extends State<Otp> {
                       'assets/images/otp.svg',
                       width: MediaQuery.sizeOf(context).width * 0.44,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Text(
                       "otp".tr,
-                      style: TextStyle(fontSize: 22),
+                      style: const TextStyle(fontSize: 22),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text("otp2".tr,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                         ),
                         textAlign: TextAlign.center),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
 
@@ -119,7 +119,7 @@ class _OtpState extends State<Otp> {
                     //   fillColor: Colors.grey.withOpacity(0.58),
                     // ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -153,7 +153,7 @@ class _OtpState extends State<Otp> {
                         // Text("Re-send code in ", style: TextStyle(fontSize: 12, color: Color(0xff5F5FE4), fontWeight: FontWeight.bold))
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     SizedBox(
@@ -172,12 +172,12 @@ class _OtpState extends State<Otp> {
                           // if(_formKey.currentState!.validate()){Navigator.pushNamed(context, "/register");};
                           // Navigator.pushNamed(context, "/register");
                         },
-                        child:
-                            Text("verify".tr, style: TextStyle(fontSize: 18)),
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10)),
                             backgroundColor: Colors.green),
+                        child:
+                            Text("verify".tr, style: const TextStyle(fontSize: 18)),
                       ),
                     ),
                   ],

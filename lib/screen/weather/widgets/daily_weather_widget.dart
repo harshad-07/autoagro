@@ -22,8 +22,8 @@ class DailyWeatherWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 400,
-      margin: EdgeInsets.all(20),
-      padding: EdgeInsets.all(15),
+      margin: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
           color: Colors.white.withAlpha(150),
           borderRadius: BorderRadius.circular(20)),
@@ -31,13 +31,13 @@ class DailyWeatherWidget extends StatelessWidget {
         children: [
           Container(
             alignment: Alignment.topLeft,
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               bottom: 10,
             ),
             child: Padding(
               padding: const EdgeInsets.only(left: 12, bottom: 7),
               child: Text("next".tr,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: CustomColors.textColorBlack, fontSize: 17)),
             ),
           ),
@@ -51,12 +51,12 @@ class DailyWeatherWidget extends StatelessWidget {
     return SizedBox(
       height: 310,
       child: ListView.builder(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         itemCount: data.daily.length > 7 ? 7 : data.daily.length,
         itemBuilder: (context, index) {
           return Column(
             children: [
-              Container(
+              SizedBox(
                 height: 70,
                 // padding: EdgeInsets.symmetric(horizontal: 6),
                 child: Row(

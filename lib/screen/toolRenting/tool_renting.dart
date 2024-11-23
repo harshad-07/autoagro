@@ -15,10 +15,10 @@ class _ToolRentingPageState extends State<ToolRentingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 9, 36, 18),
+      backgroundColor: const Color.fromARGB(255, 9, 36, 18),
       body: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(50)),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(50)),
             color: Colors.white.withOpacity(0.85)),
         // height: MediaQuery.of(context).size.height,
         // width: MediaQuery.of(context).size.width,
@@ -27,8 +27,8 @@ class _ToolRentingPageState extends State<ToolRentingPage> {
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: ListView(
-                physics: BouncingScrollPhysics(),
-                children: [
+                physics: const BouncingScrollPhysics(),
+                children: const [
                   ToolContainer(
                       imageList:
                           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk34nRtbMT-TzfBDYRatBeZzpYo5w1TdaQtNCVnwSTZjcd7eSAcbdFK2hkZZURZ8QSn1Y',
@@ -92,19 +92,19 @@ class _ToolRentingPageState extends State<ToolRentingPage> {
               ),
             ),
             AnimatedContainer(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(20),
                     topRight: Radius.circular(20),
                     topLeft: Radius.elliptical(8.5, 25)),
                 color: Colors.blueGrey,
               ),
-              margin: EdgeInsets.only(top: 25),
-              duration: Duration(milliseconds: 500),
+              margin: const EdgeInsets.only(top: 25),
+              duration: const Duration(milliseconds: 500),
               child: Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Text("services".tr,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.bold)),

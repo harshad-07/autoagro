@@ -103,7 +103,7 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
         debugPrint('Error during image processing: $e');
       }
 
-      Future<void>.delayed(Duration(seconds: 4)).then((onValue) {
+      Future<void>.delayed(const Duration(seconds: 4)).then((onValue) {
         debugPrint('procceding after pr close');
 
         if (_recognitions.isNotEmpty) {
@@ -174,16 +174,16 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 9, 36, 18),
+      backgroundColor: const Color.fromARGB(255, 9, 36, 18),
       body: SafeArea(
         child: Container(
             decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.9),
-                borderRadius: BorderRadius.vertical(top: Radius.circular(50))),
-            padding: EdgeInsets.all(32),
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(50))),
+            padding: const EdgeInsets.all(32),
             child: Column(
               children: [
-                SizedBox(height: 38),
+                const SizedBox(height: 38),
                 image != null
                     ? GestureDetector(
                         onTap: () {
@@ -203,7 +203,7 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
                         borderRadius: BorderRadius.circular(55),
                         child: Image.asset('assets/images/logo.jpeg',
                             height: 220, width: 220, fit: BoxFit.cover)),
-                SizedBox(
+                const SizedBox(
                   height: 42,
                 ),
                 Row(
@@ -212,31 +212,31 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
                     ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green.shade800,
-                            textStyle: TextStyle(fontSize: 20)),
+                            textStyle: const TextStyle(fontSize: 20)),
                         // onPressed: () {pickimage_gallery();},
                         onPressed: () => getImage(ImageSource.gallery),
-                        icon: Icon(Icons.photo),
+                        icon: const Icon(Icons.photo),
                         label: Text("Gallery".tr)),
                     ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green.shade800,
-                            textStyle: TextStyle(fontSize: 20)),
+                            textStyle: const TextStyle(fontSize: 20)),
                         // onPressed: () {pickimage_camera();},
                         onPressed: () => getImage(ImageSource.camera),
-                        icon: Icon(Icons.camera_alt),
+                        icon: const Icon(Icons.camera_alt),
                         label: Text("Camera".tr)),
                   ],
                 ),
-                SizedBox(height: 22),
+                const SizedBox(height: 22),
                 ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red.shade800,
-                        textStyle: TextStyle(fontSize: 20)),
+                        textStyle: const TextStyle(fontSize: 20)),
                     // onPressed: () {},
                     onPressed: () => predictImage(image!),
-                    icon: Icon(Icons.energy_savings_leaf),
+                    icon: const Icon(Icons.energy_savings_leaf),
                     label: Text("Detect".tr)),
-                SizedBox(height: 21),
+                const SizedBox(height: 21),
                 rule(context),
               ],
             )),
@@ -248,12 +248,12 @@ class _DiseaseDetectionState extends State<DiseaseDetection> {
     return Column(
       children: [
         Text("NOTE".tr,
-            style: TextStyle(
+            style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 decoration: TextDecoration.underline,
                 decorationStyle: TextDecorationStyle.wavy,
                 decorationThickness: 1.4)),
-        SizedBox(height: 14),
+        const SizedBox(height: 14),
         Text("note_1".tr),
         Text("note_2".tr),
         Text("note_3".tr),

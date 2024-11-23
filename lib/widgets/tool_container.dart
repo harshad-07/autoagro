@@ -17,7 +17,7 @@ class ToolContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 25, vertical: 16),
+      margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 16),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -28,26 +28,26 @@ class ToolContainer extends StatelessWidget {
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ClipRRect(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
               child: Image.network(
                 imageList,
                 fit: BoxFit.cover,
                 height: 180,
                 width: double.maxFinite,
               )),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 18),
             child: Text(name,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 // maxLines: 1,
                 overflow: TextOverflow.ellipsis),
           ),
-          SizedBox(height: 6),
+          const SizedBox(height: 6),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text('Price :', style: TextStyle(fontWeight: FontWeight.bold)),
+              const Text('Price :', style: TextStyle(fontWeight: FontWeight.bold)),
               Text('Rent : ₹$rent/day'),
               Text('Buy : ₹$buy'),
             ],

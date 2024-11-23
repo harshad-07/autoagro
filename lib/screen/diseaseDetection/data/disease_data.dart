@@ -32,133 +32,133 @@ List<DiseasesModel> getDiseases() {
   DiseasesModel model1 = DiseasesModel();
   model1.name = "Apple Black Rot";
   model1.image = "assets/black.jpg";
-  model1.tag = AppleBlack(title: "Apple Black Rot",);
+  model1.tag = const AppleBlack(title: "Apple Black Rot",);
 
   DiseasesModel model2 = DiseasesModel();
   model2.name = "Apple Cedar Rust";
   model2.image = "assets/cedar.jpg";
-  model2.tag = AppleCedarRust(title: "Apple Cedar Rust",);
+  model2.tag = const AppleCedarRust(title: "Apple Cedar Rust",);
 
   DiseasesModel model3 = DiseasesModel();
   model3.name = "Apple Scab";
   model3.image = "assets/scab.jpg";
-  model3.tag = AppleScab(title: "Apple Scab",);
+  model3.tag = const AppleScab(title: "Apple Scab",);
 
   DiseasesModel model5 = DiseasesModel();
   model5.name = "Cherry Sour Powdery Mildew";
   model5.image = "assets/cherrysour.jpg";
-  model5.tag = CherrySour(title: "Cherry Sour Powdery Mildew",);
+  model5.tag = const CherrySour(title: "Cherry Sour Powdery Mildew",);
 
   DiseasesModel model6 = DiseasesModel();
   model6.name = "Corn Common Rust";
   model6.image = "assets/corn.jpg";
-  model6.tag = CornCommonRust(title: "Corn Common Rust",);
+  model6.tag = const CornCommonRust(title: "Corn Common Rust",);
 
   DiseasesModel model7 = DiseasesModel();
   model7.name = "Corn Gray Leaf";
   model7.image = "assets/corngray.jpeg";
-  model7.tag = CornGrayLeaf(title: "Corn Gray Leaf",);
+  model7.tag = const CornGrayLeaf(title: "Corn Gray Leaf",);
 
   DiseasesModel model8 = DiseasesModel();
   model8.name = "Northern Corn Leaf Blight";
   model8.image = "assets/ncorn.JPG";
-  model8.tag = NorthernCornLeafBlight(title: 'Northern Corn Leaf Blight',);
+  model8.tag = const NorthernCornLeafBlight(title: 'Northern Corn Leaf Blight',);
 
   DiseasesModel model9 = DiseasesModel();
   model9.name = "Grape Black Rot";
   model9.image = "assets/grapeblack.jpg";
-  model9.tag = GrapeBlackRot(title: 'Grape Black Rot',);
+  model9.tag = const GrapeBlackRot(title: 'Grape Black Rot',);
 
   DiseasesModel model10 = DiseasesModel();
   model10.name = "Grape Esca";
   model10.image = "assets/esca.jpg";
-  model10.tag = GrapeEsca(title: '',);
+  model10.tag = const GrapeEsca(title: '',);
 
   DiseasesModel model11 = DiseasesModel();
   model11.name = "Grape Leaf Blight";
   model11.image = "assets/grapebli.jpg";
-  model11.tag = GrapeLeafBlight(title: '',);
+  model11.tag = const GrapeLeafBlight(title: '',);
 
 
   DiseasesModel model12 = DiseasesModel();
   model12.name = "Orange Citrus Greening";
   model12.image = "assets/orange.jpg";
-  model12.tag = OrangeCitrus(title: '',);
+  model12.tag = const OrangeCitrus(title: '',);
 
   DiseasesModel model13 = DiseasesModel();
   model13.name = "Peach Bacterial Spot";
   model13.image = "assets/peachspot1.jpg";
-  model13.tag = PeachSpot(title: '',);
+  model13.tag = const PeachSpot(title: '',);
 
   DiseasesModel model14 = DiseasesModel();
   model14.name = "Pepper Bacterial Spot";
   model14.image = "assets/pepper1.jpg";
-  model14.tag = PepperBacterialSpot(title: '',);
+  model14.tag = const PepperBacterialSpot(title: '',);
 
   DiseasesModel model15 = DiseasesModel();
   model15.name = "Potato Early Blight";
   model15.image = "assets/16.jpg";
-  model15.tag = PotatoEarlyBlight(title: '',);
+  model15.tag = const PotatoEarlyBlight(title: '',);
 
   DiseasesModel model16 = DiseasesModel();
   model16.name = "Potato Late Blight";
   model16.image = "assets/plate.jpg";
-  model16.tag = PotatoLateBlight(title: '',);
+  model16.tag = const PotatoLateBlight(title: '',);
 
   DiseasesModel model17 = DiseasesModel();
   model17.name = "Squash Powdery Mildew";
   model17.image = "assets/squash.jpg";
-  model17.tag = SquashMildew(title: '',);
+  model17.tag = const SquashMildew(title: '',);
 
   DiseasesModel model18 = DiseasesModel();
   model18.name = "Strawberry Leaf Scorch";
   model18.image = "assets/straw1.jpg";
-  model18.tag = StrawberryLeafScorch(title: '',);
+  model18.tag = const StrawberryLeafScorch(title: '',);
 
   DiseasesModel model19 = DiseasesModel();
   model19.name = "Tomato Bacteria Spot";
   model19.image = "assets/tomato1.png";
-  model19.tag = TomatoBacteriaSpot(title: '',);
+  model19.tag = const TomatoBacteriaSpot(title: '',);
 
   DiseasesModel model20 = DiseasesModel();
   model20.name = "Tomato Early Blight";
   model20.image = "assets/tlb.jpg";
-  model20.tag = TomatoEarlyBlight(title: '',);
+  model20.tag = const TomatoEarlyBlight(title: '',);
 
   DiseasesModel model21 = DiseasesModel();
   model21.name = "Tomato Late Blight";
   model21.image = "assets/latetomato.jpg";
-  model21.tag = TomatoLateBlight(title: '',);
+  model21.tag = const TomatoLateBlight(title: '',);
 
   DiseasesModel model22 = DiseasesModel();
   model22.name = "Tomato Leaf Mold";
   model22.image = "assets/mold1.jpg";
-  model22.tag = TomatoLeafMold(title: '',);
+  model22.tag = const TomatoLeafMold(title: '',);
 
   DiseasesModel model23 = DiseasesModel();
   model23.name = "Tomato Septoria Leaf Spot";
   model23.image = "assets/tomatospot2.jpeg";
-  model23.tag = TomatoLeafSpot(title: '',);
+  model23.tag = const TomatoLeafSpot(title: '',);
 
   DiseasesModel model24 = DiseasesModel();
   model24.name = "Tomato spider mites";
   model24.image = "assets/spider.jpg";
-  model24.tag = TomatoSpider(title: '',);
+  model24.tag = const TomatoSpider(title: '',);
 
   DiseasesModel model25 = DiseasesModel();
   model25.name = "Tomato Target Spot";
   model25.image = "assets/target2.jpg";
-  model25.tag = TomatoTarget(title: '',);
+  model25.tag = const TomatoTarget(title: '',);
 
   DiseasesModel model26 = DiseasesModel();
   model26.name = "Tomato Yellow Leaf Curl Virus";
   model26.image = "assets/curl.png";
-  model26.tag = TomatoYellow(title: '',);
+  model26.tag = const TomatoYellow(title: '',);
 
   DiseasesModel model27 = DiseasesModel();
   model27.name="Tomato Mosaic Virus";
   model27.image="assets/mosaic2.jpg";
-  model27.tag= TomatoMosaic(title: '',);
+  model27.tag= const TomatoMosaic(title: '',);
 
   
 

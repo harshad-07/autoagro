@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 // import 'package:carousel_pro/carousel_pro.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -29,7 +30,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
         appBar: AppBar(
             elevation: 0,
             backgroundColor: Colors.white60,
-            iconTheme: IconThemeData(color: Colors.black)),
+            iconTheme: const IconThemeData(color: Colors.black)),
         body: SafeArea(
           child: ListView(
             children: [
@@ -55,7 +56,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                         ],
                       )),
                   Padding(
-                    padding: EdgeInsets.only(top: 270, left: 20, right: 20),
+                    padding: const EdgeInsets.only(top: 270, left: 20, right: 20),
                     child: Container(
                         height: 100.0,
                         width: MediaQuery.of(context).size.width - 24.0,
@@ -68,7 +69,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                                   color: Colors.grey.withOpacity(0.3),
                                   spreadRadius: 2.0)
                             ]),
-                        child: Padding(
+                        child: const Padding(
                           padding: EdgeInsets.only(left: 20),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -76,7 +77,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                             children: [
                               Text(
                                 'Corn Common Rust',
-                                style: new TextStyle(
+                                style: TextStyle(
                                   fontFamily: "VT323",
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22.0,
@@ -84,7 +85,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                               ),
                               Text(
                                 'Puccinia sorghi Schwein',
-                                style: new TextStyle(
+                                style: TextStyle(
                                   fontSize: 15.0,
                                 ),
                               ),
@@ -93,7 +94,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                         )),
                   ),
                   AppBar(
-                    iconTheme: IconThemeData(color: Colors.white),
+                    iconTheme: const IconThemeData(color: Colors.white),
                     backgroundColor: Colors.transparent,
                     elevation: 0,
                   ),
@@ -101,14 +102,14 @@ class _CornCommonRustState extends State<CornCommonRust> {
               ),
               Padding(
                 padding:
-                    EdgeInsets.only(top: 60, bottom: 20, left: 14, right: 14),
+                    const EdgeInsets.only(top: 60, bottom: 20, left: 14, right: 14),
                 child: Text(
-                  'SYMPTOMS',
+                  'symptoms'.tr,
                   style:
-                      TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+                      const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding:
                     EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
                 child: Text(
@@ -119,14 +120,14 @@ class _CornCommonRustState extends State<CornCommonRust> {
               ),
               Padding(
                 padding:
-                    EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
+                    const EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
                 child: Text(
-                  'FAVORABLE ENVIRONMENT CONDITIONS',
+                  'conditions'.tr,
                   style:
-                      TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+                      const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding:
                     EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
                 child: Text(
@@ -137,14 +138,14 @@ class _CornCommonRustState extends State<CornCommonRust> {
               ),
               Padding(
                 padding:
-                    EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
+                    const EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
                 child: Text(
-                  'MANAGEMENT (REMEDIES)',
+                  'remedies'.tr,
                   style:
-                      TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+                      const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding:
                     EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
                 child: Text(
@@ -155,14 +156,14 @@ class _CornCommonRustState extends State<CornCommonRust> {
               ),
               Padding(
                 padding:
-                    EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
+                    const EdgeInsets.only(top: 40, bottom: 20, left: 14, right: 14),
                 child: Text(
-                  'CHEMICAL/BIOLOGICAL CONTROL',
+                  'chemicals'.tr,
                   style:
-                      TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+                      const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding:
                     EdgeInsets.only(top: 20, bottom: 20, left: 14, right: 14),
                 child: Text(
@@ -195,7 +196,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 1.0),
+                      offset: const Offset(0, 1.0),
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 0.2)
                 ]),
@@ -207,7 +208,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                   height: 40.0,
                   width: 40.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(features1)
@@ -221,7 +222,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 1.0),
+                      offset: const Offset(0, 1.0),
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 0.2)
                 ]),
@@ -233,7 +234,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                   height: 40.0,
                   width: 40.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(features2)
@@ -247,7 +248,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 1.0),
+                      offset: const Offset(0, 1.0),
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 0.2)
                 ]),
@@ -259,7 +260,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
                   height: 40.0,
                   width: 40.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(features3)
@@ -271,7 +272,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
 
   Widget buildImage(String urlImage, int index) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 7),
+      margin: const EdgeInsets.symmetric(horizontal: 7),
       child: Image.network(urlImage, fit: BoxFit.cover),
     );
   }
@@ -280,7 +281,7 @@ class _CornCommonRustState extends State<CornCommonRust> {
     return AnimatedSmoothIndicator(
       activeIndex: activeIndex,
       count: urlImage.length,
-      effect: ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.green),
+      effect: const ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.green),
     );
   }
 
@@ -288,13 +289,13 @@ class _CornCommonRustState extends State<CornCommonRust> {
     String description,
   ) {
     return Padding(
-        padding: EdgeInsets.only(left: 14, top: 6, right: 14),
+        padding: const EdgeInsets.only(left: 14, top: 6, right: 14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               description,
-              style: TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
+              style: const TextStyle(fontSize: 20, fontFamily: 'ConcertOne-Regular'),
             ),
           ],
         ));

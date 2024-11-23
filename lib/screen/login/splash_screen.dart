@@ -20,14 +20,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: FadeInImage(image: AssetImage('assets/images/logo2.jpeg'), placeholder: AssetImage('assets/images/logo.jpeg'),),
             ),
             SizedBox(height: 12),

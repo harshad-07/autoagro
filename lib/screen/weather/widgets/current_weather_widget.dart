@@ -17,9 +17,9 @@ class CurrentWeatherWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 18,),
+        const SizedBox(height: 18,),
         tempWidget(),
-        SizedBox(height: 18,),
+        const SizedBox(height: 18,),
         moreCurrentWeatherDetailsWidget(),
       ],
     );
@@ -37,13 +37,13 @@ class CurrentWeatherWidget extends StatelessWidget {
         ),
         RichText(text: TextSpan(
           text: "${data.current.temp!.round()}°",
-          style: TextStyle(color: Colors.black87, fontSize: 69, fontWeight: FontWeight.w500) 
+          style: const TextStyle(color: Colors.black87, fontSize: 69, fontWeight: FontWeight.w500) 
         )),
         Padding(
           padding: const EdgeInsets.only(bottom: 15),
           child: RichText(text: TextSpan(
             text: "${data.current.weather![0].description}",
-            style: TextStyle(color: Colors.grey, fontSize: 16, fontWeight: FontWeight.w300) 
+            style: const TextStyle(color: Colors.grey, fontSize: 16, fontWeight: FontWeight.w300) 
           )),
         )
       ],
@@ -59,7 +59,7 @@ class CurrentWeatherWidget extends StatelessWidget {
             Container(
               height: 60, 
               width: 60,
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: CustomColors.cardColor,
                 borderRadius: BorderRadius.circular(15)
@@ -69,7 +69,7 @@ class CurrentWeatherWidget extends StatelessWidget {
             Container(
               height: 60, 
               width: 60,
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: CustomColors.cardColor,
                 borderRadius: BorderRadius.circular(15)
@@ -79,7 +79,7 @@ class CurrentWeatherWidget extends StatelessWidget {
             Container(
               height: 60, 
               width: 60,
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: CustomColors.cardColor,
                 borderRadius: BorderRadius.circular(15)
@@ -88,13 +88,13 @@ class CurrentWeatherWidget extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            SizedBox(height: 20, width: 69,child: Text("${(data.current.windSpeed! * 1.6).toStringAsFixed(2)} km/h", style: TextStyle(fontSize: 12), textAlign: TextAlign.center,)),
-            SizedBox(height: 20, width: 60,child: Text("${data.current.clouds}%", style: TextStyle(fontSize: 12), textAlign: TextAlign.center,)),
-            SizedBox(height: 20, width: 60,child: Text("${data.current.humidity}%", style: TextStyle(fontSize: 12), textAlign: TextAlign.center,)),
+            SizedBox(height: 20, width: 69,child: Text("${(data.current.windSpeed! * 1.6).toStringAsFixed(2)} km/h", style: const TextStyle(fontSize: 12), textAlign: TextAlign.center,)),
+            SizedBox(height: 20, width: 60,child: Text("${data.current.clouds}%", style: const TextStyle(fontSize: 12), textAlign: TextAlign.center,)),
+            SizedBox(height: 20, width: 60,child: Text("${data.current.humidity}%", style: const TextStyle(fontSize: 12), textAlign: TextAlign.center,)),
 
             // Text("${data.current.windSpeed} km/h", style: TextStyle(fontSize: 12), textAlign: TextAlign.start,),
             // Text("${data.current.clouds}%", style: TextStyle(fontSize: 12), textAlign: TextAlign.start,),

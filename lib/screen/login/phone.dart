@@ -19,7 +19,7 @@ class _LoginPageState extends State<PhoneReg> {
 
   final _formKey = GlobalKey<FormState>();
   final TextEditingController number = TextEditingController();
-  final countryPicker = FlCountryCodePicker();
+  final countryPicker = const FlCountryCodePicker();
   CountryCode? countryCode;
 
   @override
@@ -35,7 +35,7 @@ class _LoginPageState extends State<PhoneReg> {
         child: SafeArea(
           child: Container(
             // height: MediaQuery.sizeOf(context).height,
-            margin: EdgeInsets.fromLTRB(30, 100, 30, 0),
+            margin: const EdgeInsets.fromLTRB(30, 100, 30, 0),
             // alignment: Alignment.center,
             child: ListView(
               // crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,21 +45,21 @@ class _LoginPageState extends State<PhoneReg> {
                   'assets/images/welcome.svg',
                   width: MediaQuery.sizeOf(context).width * 0.67,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text("start".tr,
-                    style: TextStyle(fontSize: 22),
+                    style: const TextStyle(fontSize: 22),
                     textAlign: TextAlign.center),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text("provide".tr,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                     ),
                     textAlign: TextAlign.center),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text("code".tr,
@@ -68,7 +68,7 @@ class _LoginPageState extends State<PhoneReg> {
                         color: Colors.green.shade700,
                         fontWeight: FontWeight.w700),
                     textAlign: TextAlign.center),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 TextFormField(
@@ -88,7 +88,7 @@ class _LoginPageState extends State<PhoneReg> {
                   maxLines: 1,
                   decoration: InputDecoration(
                     errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(width: 2, color: Colors.red),
+                        borderSide: const BorderSide(width: 2, color: Colors.red),
                         borderRadius: BorderRadius.circular(10)),
                     focusedBorder: OutlineInputBorder(
                         borderSide:
@@ -108,8 +108,8 @@ class _LoginPageState extends State<PhoneReg> {
                         });
                       },
                       child: Container(
-                        padding: EdgeInsets.all(0),
-                        margin: EdgeInsets.only(right: 15),
+                        padding: const EdgeInsets.all(0),
+                        margin: const EdgeInsets.only(right: 15),
                         height: 60,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -118,12 +118,12 @@ class _LoginPageState extends State<PhoneReg> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Container(
-                                padding: EdgeInsets.only(left: 2),
+                                padding: const EdgeInsets.only(left: 2),
                                 width: 55,
                                 child: Center(
                                     child: countryCode != null
                                         ? countryCode!.flagImage()
-                                        : Text(
+                                        : const Text(
                                             "🇮🇳",
                                             style: TextStyle(fontSize: 22),
                                           ))),
@@ -131,11 +131,11 @@ class _LoginPageState extends State<PhoneReg> {
                               padding: const EdgeInsets.only(left: 5),
                               child: Text(
                                 countryCode?.dialCode ?? "+91",
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.white, fontSize: 12),
                               ),
                             ),
-                            Icon(
+                            const Icon(
                               Icons.arrow_drop_down_outlined,
                               color: Colors.black,
                             )
@@ -145,7 +145,7 @@ class _LoginPageState extends State<PhoneReg> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 SizedBox(
@@ -167,15 +167,15 @@ class _LoginPageState extends State<PhoneReg> {
                         // });
                       }
                     },
-                    child: isLoading
-                        ? CircularProgressIndicator(
-                            color: Colors.white,
-                          )
-                        : Text("getCode".tr, style: TextStyle(fontSize: 18)),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.green.shade700,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10))),
+                    child: isLoading
+                        ? const CircularProgressIndicator(
+                            color: Colors.white,
+                          )
+                        : Text("getCode".tr, style: const TextStyle(fontSize: 18)),
                   ),
                 ),
                 // SizedBox(height: 30,),

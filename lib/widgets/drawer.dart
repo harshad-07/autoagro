@@ -43,18 +43,18 @@ class _MyDrawerState extends State<MyDrawer> {
         children: [
           SafeArea(
             child: Container(
-              margin: EdgeInsets.only(top: 25, right: 20),
+              margin: const EdgeInsets.only(top: 25, right: 20),
               height: 150,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.horizontal(right: Radius.circular(20)),
                 color: Color.fromARGB(255, 9, 36, 18),
               ),
               child: Row(
                 children: [
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Container(
                     // color: Color(0xff5F5FE4),
-                    decoration: BoxDecoration(color: Colors.green.shade200, borderRadius: BorderRadius.circular(100), image: DecorationImage(image: AssetImage('assets/icons/user.png'))),
+                    decoration: BoxDecoration(color: Colors.green.shade200, borderRadius: BorderRadius.circular(100), image: const DecorationImage(image: AssetImage('assets/icons/user.png'))),
                     width: 70,
                     height: 70,
                     child: ClipRRect(
@@ -71,36 +71,36 @@ class _MyDrawerState extends State<MyDrawer> {
                   //   backgroundImage: AssetImage('assets/icons/user.png',),
                   //   // foregroundImage: AssetImage('assets/images/me.jpeg'),
                   // ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(ap.userModel.name, style: TextStyle(color: Colors.white, fontSize: 16)),
-                      SizedBox(height: 7,),
-                      Text(ap.userModel.email, style: TextStyle(color: Colors.white, fontSize: 11)),
+                      Text(ap.userModel.name, style: const TextStyle(color: Colors.white, fontSize: 16)),
+                      const SizedBox(height: 7,),
+                      Text(ap.userModel.email, style: const TextStyle(color: Colors.white, fontSize: 11)),
                     ],
                   )
                 ],
               ),
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           getDrawerItem( Icons.dashboard,"Home", 1,ind: "home"),
-          Padding(
-            padding: const EdgeInsets.only(left:15.0,right: 15.0),
+          const Padding(
+            padding: EdgeInsets.only(left:15.0,right: 15.0),
             child: Divider(color: Color(0XFFDADADA), height: 1),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           getDrawerItem( Icons.notifications_active,"Notifications", 2,ind: "notifications"),
-          Padding(
-            padding: const EdgeInsets.only(left:15.0,right: 15.0),
+          const Padding(
+            padding: EdgeInsets.only(left:15.0,right: 15.0),
             child: Divider(color: Color(0XFFDADADA), height: 1),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           getDrawerItem( Icons.logout, "Logout", 3,ind: "log"),
-          Padding(
-            padding: const EdgeInsets.only(left:15.0,right: 15.0),
+          const Padding(
+            padding: EdgeInsets.only(left:15.0,right: 15.0),
             child: Divider(color: Color(0XFFDADADA), height: 1),
           ),
         ],
@@ -125,14 +125,14 @@ class _MyDrawerState extends State<MyDrawer> {
           showDialog(context: context,
             builder: (context)=>AlertDialog(
               backgroundColor: Colors.white,
-              title: Text("Confirmation", style: TextStyle(color:Colors.black,fontWeight: FontWeight.bold)),
-              content: Text(
+              title: const Text("Confirmation", style: TextStyle(color:Colors.black,fontWeight: FontWeight.bold)),
+              content: const Text(
                 "Are you sure you want to logout?",
                 style: TextStyle(color:Colors.black),
               ),
               actions: [
                 TextButton(
-                  child: Text(
+                  child: const Text(
                     "Yes",
                     style: TextStyle(color:Colors.black,),
                   ),
@@ -156,7 +156,7 @@ class _MyDrawerState extends State<MyDrawer> {
                 ),
                 TextButton(
                   style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.green.shade100)),
-                  child: Text("No", style: TextStyle(color:Colors.green,)),
+                  child: const Text("No", style: TextStyle(color:Colors.green,)),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -176,20 +176,20 @@ class _MyDrawerState extends State<MyDrawer> {
           Navigator.pushAndRemoveUntil(context,
               MaterialPageRoute(
                 builder: (context) {
-                  return NotificationTab();
+                  return const NotificationTab();
                 },
               ), (route) => false);
         }
       },
       child: Container(
-        color: selectedItem == pos ? Color(0XFFF2ECFD) : Colors.white,
-        padding: EdgeInsets.fromLTRB(20, 16, 20, 16),
+        color: selectedItem == pos ? const Color(0XFFF2ECFD) : Colors.white,
+        padding: const EdgeInsets.fromLTRB(20, 16, 20, 16),
         child: Row(
           children: <Widget>[
             Icon(icon,size: 20,),
             //SvgPicture.asset(icon, width: 20, height: 20),
-            SizedBox(width: 20),
-            Text(name, style: TextStyle(color: selectedItem == pos ? Color.fromARGB(255, 9, 36, 18) : Color(0XFF130925), fontSize: 18, fontFamily: 'Medium'),)
+            const SizedBox(width: 20),
+            Text(name, style: TextStyle(color: selectedItem == pos ? const Color.fromARGB(255, 9, 36, 18) : const Color(0XFF130925), fontSize: 18, fontFamily: 'Medium'),)
           ],
         ),
       ),

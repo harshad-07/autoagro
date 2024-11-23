@@ -92,17 +92,17 @@ class _RegisterPageState extends State<RegisterPage> {
 
     return Scaffold(
       body: SafeArea(
-        child: isLoading == true ? Center(child: CircularProgressIndicator(color: Colors.green),) :
+        child: isLoading == true ? const Center(child: CircularProgressIndicator(color: Colors.green),) :
         Form(
           key: _formKey,
           child: Container(
             // height: MediaQuery.sizeOf(context).height,
-            margin: EdgeInsets.fromLTRB(25, 70, 25, 30),
+            margin: const EdgeInsets.fromLTRB(25, 70, 25, 30),
             // alignment: Alignment.topCenter,
             child: ListView(
               children: [
-                Text("Heyya! Let\'s Complete Few Things!!", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
-                SizedBox(height: 30,),
+                const Text("Heyya! Let's Complete Few Things!!", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                const SizedBox(height: 30,),
                 Container(
                   alignment: Alignment.center,
                   child: Stack(
@@ -127,15 +127,15 @@ class _RegisterPageState extends State<RegisterPage> {
                             onPressed: (){showDialog(context: context, builder: (context) {
                               return SimpleDialog(
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                                title: Text("Set Profile Picture"),
-                                contentPadding: EdgeInsets.all(15),
+                                title: const Text("Set Profile Picture"),
+                                contentPadding: const EdgeInsets.all(15),
                                 children: [
-                                  SizedBox(height: 10),
+                                  const SizedBox(height: 10),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Container(
-                                        padding: EdgeInsets.all(8),
+                                        padding: const EdgeInsets.all(8),
                                         decoration: BoxDecoration( color: primary.withOpacity(0.2), shape: BoxShape.circle),
                                         child: IconButton(
                                           tooltip: "Capture a photo",
@@ -147,7 +147,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                         ),
                                       ),
                                       Container(
-                                        padding: EdgeInsets.all(8),
+                                        padding: const EdgeInsets.all(8),
                                         decoration: BoxDecoration( color: primary.withOpacity(0.2), shape: BoxShape.circle),
                                         child: IconButton(
                                           tooltip: "Upload from Gallery",
@@ -160,12 +160,12 @@ class _RegisterPageState extends State<RegisterPage> {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 8,),
+                                  const SizedBox(height: 8,),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                                     child: TextButton(
-                                      style: TextButton.styleFrom(alignment: Alignment.bottomRight, textStyle: TextStyle(color: primary, fontSize: 18), ),
-                                      child: Text("Cancle"), 
+                                      style: TextButton.styleFrom(alignment: Alignment.bottomRight, textStyle: const TextStyle(color: primary, fontSize: 18), ),
+                                      child: const Text("Cancle"), 
                                       onPressed: () => Navigator.pop(context),
                                     )
                                   ),
@@ -174,22 +174,22 @@ class _RegisterPageState extends State<RegisterPage> {
                             },);},
                             backgroundColor: Colors.teal,
                             tooltip: 'Set Profile Picture',
-                            child: Icon(Icons.add_a_photo),
+                            child: const Icon(Icons.add_a_photo),
                           ),
                         ),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Text("Welcome $name!", 
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold
                   ),
                   textAlign: TextAlign.center
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 formTextField(
                   onChanged: (value) {
                     name = value;
@@ -206,7 +206,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   }, 
                   controller: nameController
                 ),
-                SizedBox(height: 22),
+                const SizedBox(height: 22),
                 formTextField(
                   type: TextInputType.emailAddress,
                   hintText: 'Enter Your Email', 
@@ -223,7 +223,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   },
                   controller: emailController
                 ),
-                SizedBox(height: 22),
+                const SizedBox(height: 22),
                 formTextField(
                   // type: TextInputType.visiblePassword,
                   obsecureText: true,
@@ -240,7 +240,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   },
                   controller: passwordController
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
                 SizedBox(
                   height: 45,
                   width: MediaQuery.sizeOf(context).width*0.75,
@@ -249,10 +249,10 @@ class _RegisterPageState extends State<RegisterPage> {
                       if(_formKey.currentState!.validate()){
                         signUp();
                       }
-                    }, 
-                    child: loading ? CircularProgressIndicator(color: Colors.white,) : Text("Sign Up", style: TextStyle(fontSize: 18)),
+                    },
                     // style: TextButton.styleFrom(minimumSize: Size(125, 40)),
-                    style: ElevatedButton.styleFrom( shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)), backgroundColor: Colors.green),
+                    style: ElevatedButton.styleFrom( shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)), backgroundColor: Colors.green), 
+                    child: loading ? const CircularProgressIndicator(color: Colors.white,) : const Text("Sign Up", style: TextStyle(fontSize: 18)),
                   ),
                 ),
                 // Container(height: 300, color: Colors.amber, width: 20,)  

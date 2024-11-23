@@ -31,7 +31,7 @@ import 'diseases/TomatoYellow.dart';
 void showErrorProcessing(BuildContext context, String message) {
   AlertDialog dialogWithImage = AlertDialog(
     backgroundColor: Colors.white,
-    content: Container(
+    content: SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -42,7 +42,7 @@ void showErrorProcessing(BuildContext context, String message) {
             height: 120,
             width: MediaQuery.of(context).size.width,
             color: Colors.red.shade400,
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -54,7 +54,7 @@ void showErrorProcessing(BuildContext context, String message) {
               ],
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
             child: Text(
@@ -62,7 +62,7 @@ void showErrorProcessing(BuildContext context, String message) {
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           // ElevatedButton(
           //   onPressed: () {
           //     // Navigator.pop(context);
@@ -78,16 +78,16 @@ void showErrorProcessing(BuildContext context, String message) {
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.green, borderRadius: BorderRadius.circular(10)),
-              padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
-              child: Text("Try again",
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+              child: const Text("Try again",
                   style: TextStyle(color: Colors.white, fontSize: 16.0)),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
         ],
       ),
     ),
-    contentPadding: EdgeInsets.all(0),
+    contentPadding: const EdgeInsets.all(0),
   );
   showDialog(
       context: context, builder: (BuildContext context) => dialogWithImage);
@@ -106,13 +106,13 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => AppleBlack(title: "Apple Cedar Rust")),
+          builder: (context) => const AppleBlack(title: "Apple Cedar Rust")),
     );
   } else if (name == "apple cedar apple rust") {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => AppleCedarRust(
+          builder: (context) => const AppleCedarRust(
                 title: "Apple Cedar Rust",
               )),
     );
@@ -121,13 +121,13 @@ void resultPage(BuildContext context, String name) {
       context,
       MaterialPageRoute(
           builder: (context) =>
-              CherrySour(title: "Cherry Sour Powdery Mildew")),
+              const CherrySour(title: "Cherry Sour Powdery Mildew")),
     );
   } else if (name == "corn maize cercospora leaf spot gray leaf spot") {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => CornGrayLeaf(
+          builder: (context) => const CornGrayLeaf(
                 title: "Corn Gray Leaf",
               )),
     );
@@ -135,13 +135,13 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => CornCommonRust(title: "Corn Common Rust")),
+          builder: (context) => const CornCommonRust(title: "Corn Common Rust")),
     );
   } else if (name == "corn maize northern leaf blight") {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => NorthernCornLeafBlight(
+          builder: (context) => const NorthernCornLeafBlight(
                 title: 'Northern Corn Leaf Blight',
               )),
     );
@@ -149,13 +149,13 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => GrapeBlackRot(title: 'Grape Black Rot')),
+          builder: (context) => const GrapeBlackRot(title: 'Grape Black Rot')),
     );
   } else if (name == "grape esca black measles") {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => GrapeEsca(
+          builder: (context) => const GrapeEsca(
                 title: '',
               )),
     );
@@ -163,7 +163,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => GrapeLeafBlight(
+          builder: (context) => const GrapeLeafBlight(
                 title: '',
               )),
     );
@@ -171,7 +171,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => OrangeCitrus(
+          builder: (context) => const OrangeCitrus(
                 title: '',
               )),
     );
@@ -179,7 +179,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => PeachSpot(
+          builder: (context) => const PeachSpot(
                 title: '',
               )),
     );
@@ -187,7 +187,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => PepperBacterialSpot(
+          builder: (context) => const PepperBacterialSpot(
                 title: '',
               )),
     );
@@ -195,7 +195,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => PotatoEarlyBlight(
+          builder: (context) => const PotatoEarlyBlight(
                 title: '',
               )),
     );
@@ -203,7 +203,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => PotatoLateBlight(
+          builder: (context) => const PotatoLateBlight(
                 title: '',
               )),
     );
@@ -211,7 +211,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => SquashMildew(
+          builder: (context) => const SquashMildew(
                 title: '',
               )),
     );
@@ -219,7 +219,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => StrawberryLeafScorch(
+          builder: (context) => const StrawberryLeafScorch(
                 title: '',
               )),
     );
@@ -227,7 +227,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TomatoBacteriaSpot(
+          builder: (context) => const TomatoBacteriaSpot(
                 title: '',
               )),
     );
@@ -235,7 +235,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TomatoEarlyBlight(
+          builder: (context) => const TomatoEarlyBlight(
                 title: '',
               )),
     );
@@ -243,7 +243,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TomatoLateBlight(
+          builder: (context) => const TomatoLateBlight(
                 title: '',
               )),
     );
@@ -251,7 +251,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TomatoLeafMold(
+          builder: (context) => const TomatoLeafMold(
                 title: '',
               )),
     );
@@ -259,7 +259,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TomatoLeafSpot(
+          builder: (context) => const TomatoLeafSpot(
                 title: '',
               )),
     );
@@ -267,7 +267,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TomatoSpider(
+          builder: (context) => const TomatoSpider(
                 title: '',
               )),
     );
@@ -275,7 +275,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TomatoTarget(
+          builder: (context) => const TomatoTarget(
                 title: '',
               )),
     );
@@ -283,7 +283,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TomatoYellow(
+          builder: (context) => const TomatoYellow(
                 title: '',
               )),
     );
@@ -291,7 +291,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TomatoMosaic(
+          builder: (context) => const TomatoMosaic(
                 title: '',
               )),
     );
@@ -310,7 +310,7 @@ void resultPage(BuildContext context, String name) {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => Healthy(
+          builder: (context) => const Healthy(
                 title: '',
               )),
     );
@@ -328,15 +328,15 @@ void showCustomDialogWithImage(BuildContext context, var labelForHighest) {
     elevation: 0.0,
     backgroundColor: Colors.transparent,
     child: Container(
-      decoration: new BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.white,
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(8),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
               color: Colors.black26,
               blurRadius: 10.0,
-              offset: const Offset(0.0, 10.0)),
+              offset: Offset(0.0, 10.0)),
         ],
       ),
       width: MediaQuery.of(context).size.width,
@@ -344,25 +344,25 @@ void showCustomDialogWithImage(BuildContext context, var labelForHighest) {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           ClipRRect(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(8), topRight: Radius.circular(8)),
             child: Image(
                 width: MediaQuery.of(context).size.width,
-                image: AssetImage('assets/widget_delete.jpg'),
+                image: const AssetImage('assets/widget_delete.jpg'),
                 height: 120,
                 fit: BoxFit.cover),
           ),
-          SizedBox(height: 24),
-          Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16),
+          const SizedBox(height: 24),
+          const Padding(
+            padding: EdgeInsets.only(left: 16, right: 16),
             child: Text(
                 "  We are not sure with the disease .\n Do you still wish to check the disease?",
                 style: TextStyle(color: Color(0xFF5A5C5E))),
           ),
-          SizedBox(height: 16),
-          Text('Continue?',
+          const SizedBox(height: 16),
+          const Text('Continue?',
               style: TextStyle(color: Color(0xFF212121), fontSize: 18)),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Row(
@@ -371,7 +371,7 @@ void showCustomDialogWithImage(BuildContext context, var labelForHighest) {
                     child: GestureDetector(
                   onTap: () => Navigator.pop(context),
                   child: Container(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8),
@@ -381,7 +381,7 @@ void showCustomDialogWithImage(BuildContext context, var labelForHighest) {
                       child: RichText(
                         text: TextSpan(
                           children: [
-                            WidgetSpan(
+                            const WidgetSpan(
                                 child: Padding(
                                     padding: EdgeInsets.only(right: 8.0),
                                     child: Icon(Icons.close,
@@ -402,7 +402,7 @@ void showCustomDialogWithImage(BuildContext context, var labelForHighest) {
                     //   Navigator.pop(context);
                     // }),
                     ),
-                SizedBox(width: 16),
+                const SizedBox(width: 16),
                 Expanded(
                     child: GestureDetector(
                   onTap: () {
@@ -410,13 +410,13 @@ void showCustomDialogWithImage(BuildContext context, var labelForHighest) {
                     resultPage(context, labelForHighest);
                   },
                   child: Container(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                         color: Colors.indigo.shade700,
                         borderRadius: BorderRadius.circular(8)),
                     child: Center(
                       child: RichText(
-                        text: TextSpan(
+                        text: const TextSpan(
                           children: [
                             WidgetSpan(
                                 child: Padding(
@@ -443,7 +443,7 @@ void showCustomDialogWithImage(BuildContext context, var labelForHighest) {
               ],
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
         ],
       ),
     ),

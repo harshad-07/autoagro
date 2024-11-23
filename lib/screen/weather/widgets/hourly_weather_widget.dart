@@ -27,8 +27,8 @@ class HourlyWeatherWidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
-          child: Text("today".tr, style: TextStyle(fontSize: 18)),
+          margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 25),
+          child: Text("today".tr, style: const TextStyle(fontSize: 18)),
         ),
         hourlyList(),
       ],
@@ -38,9 +38,9 @@ class HourlyWeatherWidget extends StatelessWidget {
   Widget hourlyList() {
     return Container(
       height: 150,
-      padding: EdgeInsets.only(bottom: 10, top: 10),
+      padding: const EdgeInsets.only(bottom: 10, top: 10),
       child: ListView.builder(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: data.hourly.length > 12 ? 12 : data.hourly.length,
         itemBuilder: (context, index) {
@@ -48,22 +48,22 @@ class HourlyWeatherWidget extends StatelessWidget {
               onTap: () => cardIndex.value = index,
               child: Container(
                 width: 90,
-                margin: EdgeInsets.only(left: 20, right: 5),
+                margin: const EdgeInsets.only(left: 20, right: 5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                        offset: Offset(0.5, 0),
+                        offset: const Offset(0.5, 0),
                         blurRadius: 30,
                         spreadRadius: 1,
                         color: CustomColors.dividerLine.withAlpha(150))
                   ],
                   gradient: cardIndex.value == index
-                      ? LinearGradient(colors: [
+                      ? const LinearGradient(colors: [
                           CustomColors.firstGradientColor,
                           CustomColors.secondGradientColor
                         ])
-                      : LinearGradient(
+                      : const LinearGradient(
                           colors: [Colors.white60, Colors.white30]),
                 ),
                 child: HourlyDetails(
@@ -109,18 +109,18 @@ class HourlyDetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Container(
-          margin: EdgeInsets.only(top: 10),
+          margin: const EdgeInsets.only(top: 10),
           child: Text(getTime(timeStamp),
               style: TextStyle(
                   color: cardIndex == index ? Colors.white : Colors.black)),
         ),
         Container(
-          margin: EdgeInsets.all(5),
+          margin: const EdgeInsets.all(5),
           child: Image.asset('assets/weather_images/$icon.png',
               height: 40, width: 40),
         ),
         Container(
-          margin: EdgeInsets.only(bottom: 10),
+          margin: const EdgeInsets.only(bottom: 10),
           child: Text("$temp°",
               style: TextStyle(
                   color: cardIndex == index ? Colors.white : Colors.black)),

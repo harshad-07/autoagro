@@ -30,7 +30,7 @@ class _IndicatorsState extends State<Indicators> {
                     animationEnabled: true,
                     size: 160,
                     infoProperties: InfoProperties(
-                      mainLabelStyle: TextStyle(fontSize: 24),
+                      mainLabelStyle: const TextStyle(fontSize: 24),
                       modifier: (percentage) => '${percentage.toInt()}°C',
                     ),
                     customWidths: CustomSliderWidths(trackWidth: 4),
@@ -49,7 +49,7 @@ class _IndicatorsState extends State<Indicators> {
                     animationEnabled: true,
                     size: 160,
                     infoProperties: InfoProperties(
-                      mainLabelStyle: TextStyle(fontSize: 24),
+                      mainLabelStyle: const TextStyle(fontSize: 24),
                       // modifier: (percentage) => '${percentage.toInt()}°C',
                     ),
                     customWidths: CustomSliderWidths(trackWidth: 4),
@@ -62,8 +62,8 @@ class _IndicatorsState extends State<Indicators> {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 12),
+          const Padding(
+            padding: EdgeInsets.only(right: 12),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -100,7 +100,7 @@ class _MoistureState extends State<Moisture> {
           animationEnabled: true,
           size: 160,
           infoProperties: InfoProperties(
-            mainLabelStyle: TextStyle(fontSize: 24),
+            mainLabelStyle: const TextStyle(fontSize: 24),
             // modifier: (percentage) => '${percentage.toInt()}°C',
           ),
           customWidths: CustomSliderWidths(trackWidth: 4),
@@ -157,7 +157,7 @@ class _Moisture2State extends State<Moisture2>
                     child: ClipPath(
                       clipper: CircleClipper(),
                       child: CustomPaint(
-                        size: Size(200, 200),
+                        size: const Size(200, 200),
                         painter: WavePainter(
                             animationController: animationController,
                             isRightDirection: true),
@@ -170,7 +170,7 @@ class _Moisture2State extends State<Moisture2>
                     child: ClipPath(
                       clipper: CircleClipper(),
                       child: CustomPaint(
-                        size: Size(200, 200),
+                        size: const Size(200, 200),
                         painter: WavePainter(
                             animationController: animationController,
                             isRightDirection: false),
@@ -181,7 +181,7 @@ class _Moisture2State extends State<Moisture2>
                     top: size.height / 2,
                     left: size.width / 2,
                     child: CustomPaint(
-                      size: Size(200, 200),
+                      size: const Size(200, 200),
                       painter: FlaskPainter(),
                     ),
                   ),
@@ -189,7 +189,7 @@ class _Moisture2State extends State<Moisture2>
                     top: size.height / 2,
                     left: size.width / 2,
                     child: CustomPaint(
-                      size: Size(200, 200),
+                      size: const Size(200, 200),
                       painter: ReflectionPainter(),
                     ),
                   ),
@@ -211,7 +211,7 @@ class ReflectionPainter extends CustomPainter {
       ..strokeJoin = StrokeJoin.round
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.stroke
-      ..color = Color(0xFFFF8670).withOpacity(0.1)
+      ..color = const Color(0xFFFF8670).withOpacity(0.1)
       ..strokeWidth = 15;
 
     final reflection = Path();
@@ -238,7 +238,7 @@ class FlaskPainter extends CustomPainter {
       ..strokeJoin = StrokeJoin.round
       ..strokeCap = StrokeCap.round
       ..style = PaintingStyle.stroke
-      ..color = Color(0xFFFF8670)
+      ..color = const Color(0xFFFF8670)
       ..strokeWidth = 10;
 
     final flask = Path();

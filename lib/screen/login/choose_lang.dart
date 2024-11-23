@@ -1,8 +1,6 @@
 import 'package:autoagro_firebase/screen/login/phone.dart';
 import 'package:autoagro_firebase/widgets/custom_button.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class ChooseLang extends StatefulWidget {
@@ -22,15 +20,15 @@ class _ChooseLangState extends State<ChooseLang> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('choose'.tr,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            SizedBox(height: 12),
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 12),
             Card(
               child: TextButton(
                   onPressed: () {
-                    var locale = Locale('mr', 'IN');
+                    var locale = const Locale('mr', 'IN');
                     Get.updateLocale(locale);
                   },
-                  child: Text(
+                  child: const Text(
                     'मराठी',
                     style: TextStyle(color: Colors.green),
                   )),
@@ -38,10 +36,10 @@ class _ChooseLangState extends State<ChooseLang> {
             Card(
               child: TextButton(
                   onPressed: () {
-                    var locale = Locale('hi', 'IN');
+                    var locale = const Locale('hi', 'IN');
                     Get.updateLocale(locale);
                   },
-                  child: Text(
+                  child: const Text(
                     'हिंदी',
                     style: TextStyle(color: Colors.green),
                   )),
@@ -49,15 +47,15 @@ class _ChooseLangState extends State<ChooseLang> {
             Card(
               child: TextButton(
                   onPressed: () {
-                    var locale = Locale('en', 'US');
+                    var locale = const Locale('en', 'US');
                     Get.updateLocale(locale);
                   },
-                  child: Text(
+                  child: const Text(
                     'English',
                     style: TextStyle(color: Colors.green),
                   )),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             CustomButton(
                 text: 'continue'.tr,
                 onPressed: () {
